@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,body,[class*="css"]{
+
+font-family:'Poppins',sans-serif;
+
+}
+
+.stApp{
+
+background:linear-gradient(135deg,#eef5ff,#ffffff);
+
+}
+
+/* Sidebar */
+
+section[data-testid="stSidebar"]{
+
+background:linear-gradient(180deg,#0F172A,#1E3A8A);
+
+}
+
+section[data-testid="stSidebar"] *{
+
+color:white!important;
+
+}
+
+/* Titles */
+
+h1{
+
+font-size:52px;
+
+font-weight:700;
+
+color:#0F172A;
+
+}
+
+h2{
+
+color:#1E40AF;
+
+}
+
+h3{
+
+color:#2563EB;
+
+}
+
+/* Feature Card */
+
+.feature-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+height:240px;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 40px rgba(37,99,235,.25);
+
+}
+
+/* Glass Card */
+
+.glass{
+
+background:rgba(255,255,255,.7);
+
+backdrop-filter:blur(15px);
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+/* Buttons */
+
+.stButton>button{
+
+width:100%;
+
+height:55px;
+
+border-radius:14px;
+
+background:linear-gradient(90deg,#2563EB,#3B82F6);
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+border:none;
+
+transition:.3s;
+
+}
+
+.stButton>button:hover{
+
+transform:scale(1.03);
+
+box-shadow:0 10px 25px rgba(37,99,235,.3);
+
+}
+
+/* Text Area */
+
+textarea{
+
+border-radius:18px!important;
+
+border:2px solid #DBEAFE!important;
+
+}
+
+textarea:focus{
+
+box-shadow:0 0 15px rgba(59,130,246,.3)!important;
+
+}
+
+/* Animation */
+
+.feature-card,
+.glass{
+
+animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+img{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+/* ==========================================================
+Translator Cards
+========================================================== */
+
+.translate-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:22px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+margin-bottom:25px;
+
+animation:fadeUp .6s ease;
+
+}
+
+.result-card{
+
+background:linear-gradient(135deg,#E8F5E9,#F1F8E9);
+
+padding:30px;
+
+border-radius:20px;
+
+border-left:8px solid #22C55E;
+
+font-size:22px;
+
+font-weight:500;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+animation:fadeUp .7s ease;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+font-weight:700;
+
+color:#1E3A8A;
+
+margin-bottom:15px;
+
+}
+
+.action-button{
+
+margin-top:15px;
+
+}
+
+textarea{
+
+font-size:20px!important;
+
+}

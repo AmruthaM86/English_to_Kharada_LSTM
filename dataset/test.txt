@@ -1,0 +1,191 @@
+ತೆಣೆ ಉದೋ ಘಲ್ಹ	<start> <start> she poured water <end> <end>
+ತೂ ಉತ್ತರ ಬರಾಯೆ	<start> <start> you write the answer. <end> <end>
+ಇದ್ದು ವೇಳು ರಾಖ	<start> <start> please wait for some time. <end> <end>
+ತೆಣ ಪತ್ರ ಬರೆಲ್ಹ	<start> <start> he wrote a letter. <end> <end>
+ತೆಣ ಸ್ನೇಹಿತಾಕ ಸಹಾವು ಕೆಲ್ಲ	<start> <start> he helped his friend. <end> <end>
+ಮುಕ್ಕ ನವೆ ಪುಸ್ತಕ ದಾಯೆ	<start> <start> i need new book <end> <end>
+ತೂ ಡೈ ಯೋ	<start> <start> you come tomorrow. <end> <end>
+ತುವೆ ಮಜ್ಜಿಣಿ ಹಾಶಿಲ	<start> <start> you smile at me. <end> <end>
+ತೆಣೆ ಉತ್ತರ ಬರೇಲ್ಲ	<start> <start> she wrote the answer. <end> <end>
+ಲೇ ಕ್ಲಾಸ್ಸನೂ ಭಟಿಕಲಿ	<start> <start> she sat in the classroom. <end> <end>
+ತೆಣೆ ಪತ್ರ ವಾಚಿಲ	<start> <start> she read the letter. <end> <end>
+ವೆಗ್ಗಿ ಸಾಂಗ	<start> <start> reply quickly <end> <end>
+ಉಲ್ಲೇನಸ ರಭ್ಯ	<start> <start> stay calm. <end> <end>
+ಹಾವ ಏ ಕೆಲಸ ಪೂರ್ತಿ ಕರ್ರ	<start> <start> i will finish this work. <end> <end>
+ಮುಕ್ಕ ಏ ಹಾಡು ಭರ್ತಿ ಇಷ್ಟ	<start> <start> i like this song very much. <end> <end>
+ತೋ ರೋಕ ಕಾರ್ನು ಉಲ್ಲೇರ	<start> <start> she speaks well <end> <end>
+ಅಮ್ಮಿ ವೆಗ್ಗಿ ಒಚ್ಯ	<start> <start> let us go quickly. <end> <end>
+ತೀ ಘಾರ ಸ್ವಚ್ಛ ಕರ್ರ	<start> <start> she cleans the house. <end> <end>
+ತೂ ಹವೆ ಸಂಗಡ ಆಯ್ಕ	<start> <start> you listen to my words. <end> <end>
+ಮುಕ್ಕ ಉತ್ತರ ದಾಯೆ	<start> <start> i need an answer. <end> <end>
+ತೆಣ ಕೆಲಸ ಸುರು ಕೆಲ್ಲ	<start> <start> he started the work. <end> <end>
+ತೆಣೆ ಕಿಟಕಿ ಕಾಳ್ಳ	<start> <start> she opened the window. <end> <end>
+ತೆಣೆ ಕ್ಲಾಸಾನ್ನು ಪ್ರಶ್ನೆ ವಿತಾರಲ್ಲ	<start> <start> she asked a question in the class. <end> <end>
+ಅಮ್ಮಿ ಖೇಳು ಖೇಡ್ರಿ	<start> <start> we play a game. <end> <end>
+ಬಿತರಿ ಯೋ	<start> <start> come inside <end> <end>
+ತೀ ಪತ್ರ ವಾಚಿರ	<start> <start> she reads a letter. <end> <end>
+ತೋ ಉದೊ ಹಡ್ರ	<start> <start> he brings water. <end> <end>
+ಅಮ್ಮಿ ಪುಸ್ತಕ ವಾಚುಂಗ್ಗನೋಟ್ಟ	<start> <start> we are reading a book. <end> <end>
+ಹವೆ ಪುಸ್ತಕ ಹಳ್ಹ	<start> <start> i brought a book. <end> <end>
+ತೀ ಉದೊ ಹಡ್ರ	<start> <start> she brings water <end> <end>
+ತೀ ಉದೊ ಹಡ್ರ	<start> <start> she brings water <end> <end>
+ತೂ ಹಂಗ ರಾಭ	<start> <start> stand here <end> <end>
+ತೆಣೆ ಕಾಗಧಾನ್ನು ಚಿತ್ರ ಬರೇಲ್ಲ	<start> <start> she drew a picture on the paper. <end> <end>
+ಅಮ್ಮಿ ವೆಗ್ಗಿ ಗೆಲ್ಲಿ	<start> <start> we went fast <end> <end>
+ತೀ ಸ್ನೇಹಿತಾಕ ಭೇಟಿಧಲ್ಲಿ	<start> <start> she met her friend. <end> <end>
+ಏ ಸುಲಭ ಕೆಲಸ	<start> <start> this is an easy task. <end> <end>
+ಹಂಗ ಭಡ್ಕ ಅತ್ತ	<start> <start> sit here now. <end> <end>
+ತುಮ್ಮಿ ಮಜ್ಜಂಗತ ಚಾಂಕು ಯೂ	<start> <start> you walk with me. <end> <end>
+ಅಮ್ಮಿ ಕೆಲಸ ಕರಾ ಶುರು ಕಾರ್ಯ	<start> <start> let us start the work <end> <end>
+ತೋ ಘರಾಣಿ ಪರ್ತುನು ಗೆಲ್ಲೊ	<start> <start> he returned home <end> <end>
+ತೋ ಚಹಾ ಕರ್ರ	<start> <start> he makes tea <end> <end>
+ತೋ ಸಕ್ಕಳಾ ಧಾವಲೊ	<start> <start> he ran in the morning. <end> <end>
+ಹವೆ ನವೆ ಕೆಲಸ ಕರಾಕ ಶುರು ಕೆಲ್ಲ	<start> <start> i started a new job. <end> <end>
+ಮುಕ್ಕ ಚಾಯ ಧಾಯೆ	<start> <start> i want tea. <end> <end>
+ಅಮ್ಮಿ ಪೈ ಮೇಳ್ಯ್	<start> <start> let us meet tomorrow <end> <end>
+ತೀ ಪಾಟು ಅಭ್ಯಾಸ ಕರ್ರ	<start> <start> she practices the lesson. <end> <end>
+ತೋ ಶಾಲೇಕ ಪುಳ್ಳೆ ರಬ್ಬೀಲೋ	<start> <start> he stood in front of the school. <end> <end>
+ಅಮ್ಮಿ ಸಕ್ಕಳಾ ಧೌವ್ಯ	<start> <start> let us run in the morning. <end> <end>
+ಮುಕ್ಕ ಏ ಕೆಲಸ ಕಷ್ಟ	<start> <start> this work is difficult for me. <end> <end>
+ತೂ ಹಂಗ ಬರಾಯೆ	<start> <start> you write here. <end> <end>
+ಅಮ್ಮಿ ನವೆ ಶಿಕ್ಯ	<start> <start> let us learn new <end> <end>
+ಏ ಹೊಳ್ಳ ಘಾರ	<start> <start> this is big house <end> <end>
+ತೆ ಣೆ ಚಿತ್ತ ಬಿಡಿಸ್ಪೆಲ್ಲ	<start> <start> he drew a picture. <end> <end>
+ತೆಣ ಗಡಿಯಾರ ಪಳೇಲ	<start> <start> he looked at the clock. <end> <end>
+ತೆಣ ಸ್ನೇಹಿತಾಕ ಪತ್ರ ಬರೇಲ್ಲ	<start> <start> he wrote a letter to his friend. <end> <end>
+ಅಮ್ಮಿ ಸಂಗತಾ ಶಿಕ್ಯ	<start> <start> let us learn together. <end> <end>
+ತೋ ಶಾಲೇಕೆ ಏರ	<start> <start> he comes to school. <end> <end>
+ತೋ ಮುಕ್ಕ ಸಹಾವು ಕರ್ರ	<start> <start> he helps me <end> <end>
+ತೋ ವೆಗ್ಗಿ ಗೆಲ್ಲೊ	<start> <start> he left early <end> <end>
+ತೆಣ ಪುಸ್ತಕ ಉಘಲ್ಲಿ	<start> <start> he opened the book. <end> <end>
+ಮುಕ್ಕ ನವೆ ಪುಸ್ತಕ ಮೇಳ್ಹ	<start> <start> i got a new book. <end> <end>
+ಮುಕ್ಕ ಇದ್ದು ಉದೋ ದೀ	<start> <start> give me water <end> <end>
+ಮುಕ್ಕ ಸಹಾವು ಮೇಳ್ಹ	<start> <start> i got help <end> <end>
+ಹಾವ ಪ್ರಶ್ನೆ ವಿತಾರ	<start> <start> i ask a question. <end> <end>
+ತೆಣ ಬಾಗಿಲ ಕಾಳ್ಳ	<start> <start> he opened the door. <end> <end>
+ತುಮ್ಮಿ ಖೈ ವೇರಿ	<start> <start> where are you going? <end> <end>
+ತೇ ಪೋರ್ನೆ ರೂಖ	<start> <start> that is an old tree. <end> <end>
+ತೀ ಅತ್ತ ಏರ	<start> <start> she is coming now. <end> <end>
+ಅಮ್ಮಿ ಕ್ರೀಡಾಂಗಣ ಡೌವ್ಯ	<start> <start> let us run in the playground. <end> <end>
+ಮಜ್ಜಂಗತ ರಾಭ	<start> <start> stay with me <end> <end>
+ಏ ಹೊಳ್ಳ ಸಮಸ್ಯೆ	<start> <start> this is a big problem. <end> <end>
+ತೆಣ ಏಕ ಚಿತ್ರ ಕೆಲ್ಹ	<start> <start> she drew a picture. <end> <end>
+ಮುಕ್ಕ ಉತ್ತರ ದಾಯೆ	<start> <start> i need an answer. <end> <end>
+ಏ ವಿಷಯ ಮುಕ್ಕ ಕ್ಲಿಯರ್ ದಲ್ಲ	<start> <start> this topic is clear to me. <end> <end>
+ತುತ್ತ ಜವಣ ದಲ್ಲಾ	<start> <start> did you eat food? <end> <end>
+ಅಮ್ಮಿ ಖೇಳು ಶುರು ಕರ್ಯ	<start> <start> let us start the game <end> <end>
+ಹಾವ ಸತ್ಯ ಸಂಗರ	<start> <start> i tell the truth. <end> <end>
+ತೀ ಪತ್ರ ವಾಚಿರ	<start> <start> she reads a letter <end> <end>
+ಅಮ್ಮಿ ಗೆಲ್ಪಲಿ ಆಜಿ	<start> <start> we won today. <end> <end>
+ಅಮ್ಮಿ ಸಕ್ಕಳ ಭೇಟಿ ದೌವ್ಯ	<start> <start> let us meet in the morning. <end> <end>
+ಅಮ್ಮಿ ನವೆ ಯೋಜನಾಚ ಬಗ್ಗೆ ಉಲೋಲ್ಲವ್ಯ	<start> <start> let us talk about the new project. <end> <end>
+ಮುಕ್ಕ ಪೈಶೆ ಮೇಳ್ಳ	<start> <start> i got money <end> <end>
+ಏ ನವೆ ಬೇಗ	<start> <start> this is a new bag. <end> <end>
+ತೆ ಣ ಪತ್ರ ಬಳೆಲ್ಲ	<start> <start> he sent the letter. <end> <end>
+ವೆಗ್ಗಿ ಚೌನ್ಕ್ಯಾ	<start> <start> walk fast <end> <end>
+ತೆ ಣ ಸತ್ಯ ಸಂಗೀಲ	<start> <start> he told the truth. <end> <end>
+ಆಜಿ ವಾಚ್ಯ	<start> <start> let us study today <end> <end>
+ತೋ ರುಖ್ಖಾ ಅಡ್ಯೇಕ ರಬ್ಬಿಲೋ	<start> <start> he stood under the shade of the tree. <end> <end>
+ಮುಕ್ಕ ಏ ಜಾಗ ಇಷ್ಟ	<start> <start> i like this place. <end> <end>
+ಮುಕ್ಕ ಏ ಕಥೆ ಅರ್ಥದಲ್ಲ	<start> <start> i understood this story. <end> <end>
+ತೆಣೆ ಹಣ್ಣು ಕುಟ್ಟಂಕೆಲ್ಲ	<start> <start> she cut fruit <end> <end>
+ತೀ ಸ್ನೇಹಿತಾಕ ಭೇಟಿ ಧಲ್ಲಿ	<start> <start> she met a friend. <end> <end>
+ತೀ ರೋಕಾ ಕಾರ್ನು ಹಾಸರ	<start> <start> she smiles happily <end> <end>
+ತೀ ಕ್ಲಾಸಾನ್ನು ಹಾಷಿಲಿ	<start> <start> she laughed in the classroom. <end> <end>
+ತೆಣೆ ತರಗತೀನ್ನು ಉತ್ತರ ಸಂಗಿಲ	<start> <start> she answered in the class. <end> <end>
+ತೆನೆ ಬಾಗಿಲ ಕಾಳ್ಳ	<start> <start> she opened the door. <end> <end>
+ತೆಣ ಸ್ನೇಹಿತಾಕ ಕಾಲ್ ಕೆಲ್ಲ	<start> <start> he called his friend. <end> <end>
+ತೋ ಶಾಲೇಕ ಪುಳ್ಳೆ ರಬ್ಬೀಲೋ	<start> <start> he stood in front of the school. <end> <end>
+ತೆಣೆ ಗಡಿಯಾರ ಪಳೆಲ್ಲ	<start> <start> she looked at the clock. <end> <end>
+ಏ ಮತ್ತ ಪುಸ್ತಕ	<start> <start> this is my book. <end> <end>
+ಅಮ್ಮಿ ಘರಾಣಿ ಬಿಚ್ಯಾ	<start> <start> let us go home now. <end> <end>
+ತೋ ಕೆಲಸ ಸೊದ್ದುನ್ಗ ನ್ನೊಟ್ಟ	<start> <start> he is looking for a job. <end> <end>
+ಅತ್ತ ಸಮ ದಲ್ಲ	<start> <start> it is okay now. <end> <end>
+ತೋ ಸಂಗೀತ ಆಯ್ಕರ	<start> <start> he listens to music. <end> <end>
+ಅಮ್ಮಿ ಅತ್ತ ವಿಶ್ರಾಂತಿ ಕಂಗಣ್ಯ	<start> <start> let us take rest now. <end> <end>
+ತೋ ಸತ್ಯ ಸಂಗರ	<start> <start> he tells truth <end> <end>
+ತೀ ಘಾರ ಕ್ಲೀನ್ ಕರ್ಙನ್ನೊಟ್ಟ	<start> <start> she is cleaning house <end> <end>
+ತೆಣ ಮುಕ್ಕ ಸಾಹವು ಕೆಲ್ಲ	<start> <start> he helped me. <end> <end>
+ಏ ನವೆ ಪ್ರಶ್ನೆ	<start> <start> this is new question <end> <end>
+ಏ ನವೆ ಪ್ರಶ್ನೆ	<start> <start> this is a new question <end> <end>
+ತೂ ಕೆಶ್ಶ ಅಯ್ಕರ	<start> <start> what are you listening to? <end> <end>
+ಏ ಅಮ್ತ ಗಾವ	<start> <start> that is our village. <end> <end>
+ತೋ ಚಾಯ ಪೀರ	<start> <start> he drinks tea. <end> <end>
+ಹಾವ ಸಕ್ಕಲಾಂಚಿ ಉಡ್ಕಿಲೆ	<start> <start> i woke up morning <end> <end>
+ಅಮ್ಮಿ ಅತ್ತ ಶುರು ಕರ್ಯ	<start> <start> let us start now <end> <end>
+ತೀ ಅತ್ತ ಏರ	<start> <start> she is coming now. <end> <end>
+ತೆ ಣ ನವೆ ಪುಸ್ತಕ ವಾಚಿಲ	<start> <start> he read a new book. <end> <end>
+ಹಾವ ಆಜಿ ಖುಪೀಣೆ ಬಿಟ್ಟ	<start> <start> i am happy today. <end> <end>
+ತೆಣ ಪುಸ್ತಕ ಹಳ್ಳ	<start> <start> he bought a book. <end> <end>
+ತುತ್ತ ಸಹಾವು ಮುಕ್ಕ ಮೇಳ್ಳ	<start> <start> i got your help <end> <end>
+ತೋ ಹಣ್ಣು ಖಾರ	<start> <start> he eats fruit <end> <end>
+ಏ ಹೊಳ್ಳ ರೂಖು	<start> <start> that is a big tree. <end> <end>
+ತೋ ಶಾಲೆಕ ಗೆಲೊಲ್	<start> <start> he went to school <end> <end>
+ತೀ ಹುಳು ಉಲ್ಲೇರ	<start> <start> he spoke slowly. <end> <end>
+ತೀ ಘರಾಣಿ ಏರ	<start> <start> she comes home. <end> <end>
+ಏ ಕು ಚ್ಛಟ್ಟ ವಿಚಾರ	<start> <start> that is bad matter <end> <end>
+ತೀ ಘಾರ ಕ್ಲೀನ್ ಕರ್ಙನ್ನೊಟ್ಟ	<start> <start> she is cleaning house <end> <end>
+ತೀ ಕ್ಲಾಸಾನ್ನು ಬರೋಂಗನ್ನೊಟ್ಟ	<start> <start> she is writing in the classroom. <end> <end>
+ತೀ ಖುಷೀನೆ ಉಲ್ಲೇರ	<start> <start> she speaks happily <end> <end>
+ತೂ ಹಂಗ ರಾಭ	<start> <start> you stand here. <end> <end>
+ಬಾಗಿಲ ಕಾಣ್ಣು ಸೋಡಿ	<start> <start> please open the door. <end> <end>
+ತೆಣೆ ದೂದ ಊನ ಕೆಲ್ಲ	<start> <start> she boiled milk. <end> <end>
+ಅಮ್ಮಿ ನೈ ಬಂಧಿಂಟು ಚೌಕ್ಯ	<start> <start> let us walk by the riverbank. <end> <end>
+ತೀ ಖುಷೀನೆ ಉಲ್ಲೇರ	<start> <start> she speaks happily <end> <end>
+ಅಮ್ಮಿ ಕ್ರೀಡಾಂಗಣ ಡೌವ್ಯ	<start> <start> you pay attention to my words. <end> <end>
+ತೆಣ ಬಾಗಿಲ ಕಾಳ್ಳ	<start> <start> he opened door <end> <end>
+ಮುಕ್ಕ ಏ ಕೆಲಸ ಸುಲಭ	<start> <start> this work is easy for me. <end> <end>
+ಅಮ್ಮಿ ಘರಾಣಿ ಒಚ್ಯಾ	<start> <start> let us go home. <end> <end>
+ಮುಕ್ಕ ಪುಸ್ತಕ ಇಷ್ಟ	<start> <start> i like book <end> <end>
+ತೀ ಮುಕ್ಕ ಪಳೇರ	<start> <start> she sees me <end> <end>
+ತೂ ಹುಳು ಉಲ್ಲಾಯೆ	<start> <start> you speak slowly. <end> <end>
+ತೋ ಮುಕ್ಕ ಸಹಾವು ಕರ್ರ	<start> <start> he helps me. <end> <end>
+ತೆಣೆ ಚೆನ್ನಾಕ ಉದು ಘಲ್ಲ	<start> <start> she watered the garden. <end> <end>
+ಮುಕ್ಕ ಉದೊ ದೀ	<start> <start> give me water. <end> <end>
+ಏ ಚಿತ್ರ ರೋಕ ಅತ್ಸ	<start> <start> this picture is good. <end> <end>
+ತೋ ಕೆಲಸ ಕರ್ಗಣ್ಣು ಒಟ್ಟ	<start> <start> he is working. <end> <end>
+ಅಮ್ಮಿ ಏಕ ಕೆಲಸ ಕರ್ಯ	<start> <start> let us work today <end> <end>
+ಮುಕ್ಕ ಚಾ ಇಷ್ಟ	<start> <start> i like tea. <end> <end>
+ತೂ ಅತ್ತ ಆಯ್ಕ	<start> <start> you listen now. <end> <end>
+ತುಮ್ಮಿ ಮತ್ತ ಘರಾಣಿ ಯಾ	<start> <start> come to my house. <end> <end>
+ತೆಣೆ ಶಾಲೆ ಸೊಳ್ಳ	<start> <start> she left school <end> <end>
+ತೀ ಹಾಡು ಹಾಡುಪಿರ	<start> <start> she is singing a song. <end> <end>
+ಹವೆ ನವೆ ವಿಷಯ ಶಿಕ್ಕಿಲೆ	<start> <start> i learned a new topic. <end> <end>
+ತೂ ಮತ್ತ ಸಂಗತ ಯೋ	<start> <start> you come with me. <end> <end>
+ತೂ ಸತ್ಯ ಸಾಂಗ ಅತ್ತ	<start> <start> tell the truth now. <end> <end>
+ಅಮ್ಮಿ ಪುಸ್ತಕ ವಾಚಿರಿ	<start> <start> we read books <end> <end>
+ಹಾವ ಕೆಲಸ ಸೊದ್ದುನ್ಗ ಣ್ಣು ಒಟ್ಟ	<start> <start> i am looking for a job. <end> <end>
+ತೆಣ ಪುಸ್ತಕ ಉಘಲ್ಲಿ	<start> <start> he opened the book. <end> <end>
+ಅಮ್ಮಿ ಕೆಲಸ ಶುರು ಕರ್ಯ	<start> <start> let us start work <end> <end>
+ಅಮ್ಮಿ ಅತ್ತ ಶುರು ಕಾರ್ಯ	<start> <start> let us start now <end> <end>
+ಅಮ್ಮಿ ಸಕ್ಕಾಳ ವ್ಯಾಯಾಮು ಕರ್ಯ	<start> <start> let us exercise in the morning. <end> <end>
+ಅಮ್ಮಿ ಅತ್ತ ಓಚ್ಯ	<start> <start> let us go now <end> <end>
+ಹಾವ ನವೆ ವಿಷಯ ವಾಚುಂಗನ್ನೊಟ್ಟ	<start> <start> i am studying a new topic. <end> <end>
+ತೋ ಆಜಿ ಪತ್ತ ಬಳೇಲ್ಹ	<start> <start> he sent letter today <end> <end>
+ತೀ ಜೆನ್ನಾನ್ನು ಭಡ್ಕಿಲಿ	<start> <start> she sat in the garden. <end> <end>
+ಮುಕ್ಕ ಚಾ ಧಾಯೆ	<start> <start> i want tea. <end> <end>
+ತೆಣ ಸ್ನೇಹಿತಾಕ ಸಹಾವು ಕೆಲ್ಲ	<start> <start> he helped his friend. <end> <end>
+ಮುಕ್ಕ ಸಮಯ ಧಾಯೆ	<start> <start> i need time <end> <end>
+ತೋ ಸಕ್ಕಳ ಉಡ್ಕಿಲೋ	<start> <start> he woke up in the morning. <end> <end>
+ತೋ ರೂಖು ಬಿಯ್ರ್	<start> <start> he plants a tree. <end> <end>
+ಈ ಮುಕ್ಕ ಇಷ್ಟ	<start> <start> i like this <end> <end>
+ಅಮ್ಮಿ ಸಾಯಂಕಾಲ ಮೆಳ್ಯಾ	<start> <start> let us meet in the evening. <end> <end>
+ಮುಕ್ಕ ಚಾ ಇಷ್ಟ	<start> <start> i like tea. <end> <end>
+ಅಮ್ಮಿ ಪುಸ್ತಕ ವಾಚಿರಿ	<start> <start> we read books. <end> <end>
+ತೀ ಹಾಡು ಶಿಕ್ಕಿಲಿ	<start> <start> she learned a song. <end> <end>
+ತುಮ್ಮಿ ಹಂಗ ಭಡ್ಕ್ಯ	<start> <start> please sit here. <end> <end>
+ತೆಣ ಬಾಗಿಲ ಕಾಳ್ಳ	<start> <start> he opened the door. <end> <end>
+ತೀ ಸಕ್ಕಳಾಂಚಿ ವ್ಯಾಯಾಮ ಕರ್ರ	<start> <start> he exercises in the morning. <end> <end>
+ಮುಕ್ಕ ಏ ಕೆಲಸ ಸುಲಭ	<start> <start> this work is easy for me. <end> <end>
+ಹಾವ ಏ ಹಾಡು ಪಿಕುನ್ನ್ಗನೋಟ್ಟ	<start> <start> i am listening to this song. <end> <end>
+ಏಕ ಪದ್ಯ ಸಂಗ್ಯಾ	<start> <start> let us sing song <end> <end>
+ತೀ ಘರಾಣಿ ಪತ್ತಲಿ	<start> <start> she reached home. <end> <end>
+ಹಾವ ಅತ್ತ ವಾಚುಂಗನೋಟ್ಟ್	<start> <start> i am studying now. <end> <end>
+ತೂ ಕೆಶ್ಶ ಕರ್ರ	<start> <start> what are you doing? <end> <end>
+ಏ ಭರ್ತಿ ರೋಕ ಅಸ್ಸ	<start> <start> this is very good. <end> <end>
+ತೂ ಮುಕ್ಕ ಪೋಳೆ	<start> <start> look at me. <end> <end>
+ಅಮ್ಮಿ ಆಜಿ ಗೆಲ್ಲ್ಯ	<start> <start> let us win today. <end> <end>
+ಹಾವ ಶಾಲೆಕ ವೇರ	<start> <start> i will go to school. <end> <end>
+ತೋ ಶಾಲೇಕ ವೆಗ್ಗಿ ಅಯ್ಲೊ	<start> <start> he came early to school. <end> <end>
+ತೆಣ ಪತ್ರ ವಾಚಿಲ	<start> <start> he read the letter. <end> <end>
+ತೂ ಮಜ್ಜ ಸಂಗತ ಚೌನ್ಕ	<start> <start> you walk with me. <end> <end>
