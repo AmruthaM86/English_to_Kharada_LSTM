@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # How to Run the Project
 
 Follow the steps below to set up and run the English to Kharada Translation project.
@@ -395,3 +396,7 @@ Kharada_English_Translator/
     ```
 
 pip install nltk scikit-learn matplotlib pandas
+=======
+# English_to_Kharada_LSTM
+LSTM model
+>>>>>>> 03814c1bce3758addfacc2d1232f8b19cbcf9294
