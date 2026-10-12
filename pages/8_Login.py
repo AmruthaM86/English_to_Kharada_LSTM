@@ -1,156 +1,197 @@
 import streamlit as st
 from utils.helper import load_css
 
-# ==========================================
+# ============================================================
 # Page Configuration
-# ==========================================
+# ============================================================
 
 st.set_page_config(
     page_title="Login",
     page_icon="🔐",
     layout="centered"
 )
+
+# Load external CSS
 load_css()
-# ==========================================
-# CSS
-# ==========================================
 
-st.markdown("""
-<style>
 
-.big-title{
-    font-size:42px;
-    font-weight:bold;
-    color:#0F62FE;
-    text-align:center;
-}
+# ============================================================
+# Custom CSS
+# ============================================================
 
-.login-box{
+st.markdown(
+    """
+    <style>
+        .big-title {
+            font-size: 42px;
+            font-weight: bold;
+            color: #0F62FE;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    padding:30px;
+        .login-box {
+            padding: 30px;
+            border-radius: 15px;
+            background-color: #F8F9FA;
+            border: 1px solid #DDDDDD;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-    border-radius:15px;
 
-    background-color:#F8F9FA;
-
-    border:1px solid #DDDDDD;
-
-}
-
-</style>
-""",unsafe_allow_html=True)
-
-# ==========================================
-# Session
-# ==========================================
+# ============================================================
+# Session State
+# ============================================================
 
 if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
 
-    st.session_state.logged_in=False
 
-# ==========================================
+# ============================================================
 # Login Credentials
-# ==========================================
+# ============================================================
 
-USERNAME="admin"
+USERNAME = "admin"
+PASSWORD = "admin123"
 
-PASSWORD="admin123"
 
-# ==========================================
-# Already Logged In
-# ==========================================
+# ============================================================
+# Logged-In Screen
+# ============================================================
 
 if st.session_state.logged_in:
 
-    st.success("✅ Login Successful")
+    st.markdown(
+        '<div class="big-title">🔐 Login Successful</div>',
+        unsafe_allow_html=True
+    )
 
+    st.success("Welcome! You have successfully logged in.")
     st.balloons()
 
-    st.write("Welcome to the Kharada → English Translator")
+    st.write(
+        "Welcome to the **Kharada → English Neural Machine Translation System**."
+    )
 
     st.divider()
 
-    st.subheader("Project Modules")
+    # --------------------------------------------------------
+    # Project Modules
+    # --------------------------------------------------------
 
-    st.write("🏠 Home")
+    st.subheader("📚 Project Modules")
 
-    st.write("🌐 Translator")
+    col1, col2 = st.columns(2)
 
-    st.write("🕘 History")
+    with col1:
+        st.write("🏠 **Home**")
+        st.write("🌐 **Translator**")
+        st.write("🕘 **History**")
+        st.write("📊 **Model Evaluation**")
 
-    st.write("📊 Model Evaluation")
-
-    st.write("📉 Training Graphs")
-
-    st.write("📈 Dataset Statistics")
-
-    st.write("📖 About Project")
+    with col2:
+        st.write("📉 **Training Graphs**")
+        st.write("📈 **Dataset Statistics**")
+        st.write("📖 **About Project**")
 
     st.divider()
 
-    if st.button("🚪 Logout"):
+    # --------------------------------------------------------
+    # Logout
+    # --------------------------------------------------------
 
-        st.session_state.logged_in=False
-
+    if st.button("🚪 Logout", use_container_width=True):
+        st.session_state.logged_in = False
         st.rerun()
 
-# ==========================================
+
+# ============================================================
 # Login Screen
-# ==========================================
+# ============================================================
 
 else:
 
     st.markdown(
-    '<div class="big-title">🔐 Login</div>',
-    unsafe_allow_html=True
+        '<div class="big-title">🔐 Welcome Back!</div>',
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        "<p style='text-align:center;'>"
+        "Login to access the Kharada → English Translator"
+        "</p>",
+        unsafe_allow_html=True
     )
 
     st.write("")
 
-    username=st.text_input(
+    # --------------------------------------------------------
+    # Login Form
+    # --------------------------------------------------------
 
-        "Username"
-
+    username = st.text_input(
+        "👤 Username",
+        placeholder="Enter your username"
     )
 
-    password=st.text_input(
-
-        "Password",
-
-        type="password"
-
+    password = st.text_input(
+        "🔑 Password",
+        type="password",
+        placeholder="Enter your password"
     )
 
-    remember=st.checkbox("Remember Me")
+    remember = st.checkbox("Remember Me")
 
     st.write("")
 
-    if st.button("Login",use_container_width=True):
+    # --------------------------------------------------------
+    # Login Button
+    # --------------------------------------------------------
 
-        if username==USERNAME and password==PASSWORD:
+    if st.button(
+        "🔓 Login",
+        use_container_width=True,
+        type="primary"
+    ):
 
-            st.session_state.logged_in=True
+        if username == USERNAME and password == PASSWORD:
 
-            st.success("Login Successful")
+            st.session_state.logged_in = True
 
+            st.success("✅ Login Successful!")
             st.rerun()
 
         else:
 
-            st.error("Invalid Username or Password")
+            st.error("❌ Invalid Username or Password")
+
+
+    # ========================================================
+    # Demo Credentials
+    # ========================================================
 
     st.divider()
 
-    st.info("""
+    st.info(
+        """
+        **🔑 Demo Credentials**
 
-Demo Credentials
+        **Username:** `admin`
 
-Username : admin
+        **Password:** `admin123`
+        """
+    )
 
-Password : admin123
 
-""")
+# ============================================================
+# Footer
+# ============================================================
 
 st.divider()
 
-st.caption("© 2026 Kharada → English Neural Machine Translation")
+st.caption(
+    "© 2026 Kharada → English Neural Machine Translation"
+)

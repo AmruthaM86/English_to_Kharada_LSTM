@@ -8,32 +8,70 @@ from utils.helper import load_css
 # ==========================================================
 # Page Configuration
 # ==========================================================
-
 st.set_page_config(
     page_title="Translator",
     page_icon="🌐",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-load_css()
+# Load custom CSS if available
+try:
+    load_css()
+except Exception:
+    pass
+
+# Custom Styling: Soft Vibrant Gradient Background + Card Layout
+st.markdown("""
+    <style>
+    /* Main App Background - Soft Indigo/Sky Gradient */
+    .stApp {
+        background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 50%, #dbeafe 100%);
+        color: #0f172a;
+    }
+
+    /* Ensure strong text contrast */
+    h1, h2, h3, h4, h5, h6, p, span, label, div {
+        color: #0f172a !important;
+    }
+
+    /* Single Instruction Box Header */
+    .instruction-card {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(191, 219, 254, 0.9);
+        border-radius: 12px;
+        padding: 16px 24px;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1e3a8a !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        margin-bottom: 25px;
+    }
+
+    /* Input & Output Box Container Cards */
+    .box-card {
+        background-color: #ffffff;
+        border: 2px solid #3b82f6;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Output Display Text */
+    .output-text {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1e3a8a !important;
+        min-height: 120px;
+        padding: 10px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # ==========================================================
-# Assets
+# Session State Initialization
 # ==========================================================
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-ICON_PATH = os.path.join(
-    BASE_DIR,
-    "assets",
-    "icons",
-    "translate.png"
-)
-
-# ==========================================================
-# Session State
-# ==========================================================
-
 if "sentence" not in st.session_state:
     st.session_state.sentence = ""
 
@@ -41,154 +79,110 @@ if "translation" not in st.session_state:
     st.session_state.translation = ""
 
 # ==========================================================
-# Header
+# Single Clean Instruction
 # ==========================================================
-
-col1, col2 = st.columns([1, 8])
-
-with col1:
-    if os.path.exists(ICON_PATH):
-        st.image(ICON_PATH, width=80)
-
-with col2:
-    st.title("🌐 Kharada → English Translator")
-    st.write(
-        "Translate Kharada sentences into English using the trained Seq2Seq Encoder–Decoder LSTM model."
-    )
-
-st.divider()
+st.markdown("""
+<div class="instruction-card">
+    📝 Enter the <b>Kharada</b> sentence in the top box and click <b>Translate</b> to receive the <b>English</b> sentence in the bottom box.
+</div>
+""", unsafe_allow_html=True)
 
 # ==========================================================
-# Statistics
+# Box 1: First Language (Kharada Input)
 # ==========================================================
-
-c1, c2, c3 = st.columns(3)
-
-c1.metric("Language", "Kharada → English")
-c2.metric("Model", "Seq2Seq LSTM")
-c3.metric("Framework", "TensorFlow")
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-# ==========================================================
-# Input
-# ==========================================================
-
-st.subheader("✍ Enter Kharada Sentence")
+st.markdown("### 🗣️ Kharada Language (Input)")
 
 st.text_area(
-    "",
+    label="Kharada Input Sentence",
     key="sentence",
-    height=180,
-    placeholder="Example:\nಹಾವ ಹಂಗ ಒಟ್ಟ"
+    height=140,
+    placeholder="Enter Kharada sentence here...",
+    label_visibility="collapsed"
 )
 
-st.markdown("<br>", unsafe_allow_html=True)
+st.space(1)
 
 # ==========================================================
-# Buttons
+# Translator Button in the Middle
 # ==========================================================
+col_left, col_btn1, col_btn2, col_right = st.columns([2, 2, 1, 2])
 
-col1, col2, col3 = st.columns(3)
+with col_btn1:
+    translate_clicked = st.button("🌐 Translate", type="primary", use_container_width=True)
 
-translate_clicked = col1.button(
-    "🌐 Translate",
-    use_container_width=True
-)
-
-clear_clicked = col2.button(
-    "🗑 Clear",
-    use_container_width=True
-)
-
-download_placeholder = col3.empty()
+# with col_btn2:
+#     clear_clicked = st.button("🗑️ Clear", use_container_width=True)
 
 # ==========================================================
-# Translate
+# Translation Logic
 # ==========================================================
-
 if translate_clicked:
-
     if st.session_state.sentence.strip() == "":
-
-        st.warning("Please enter a Kharada sentence.")
-
+        st.warning("⚠️ Please enter a Kharada sentence first.")
     else:
-
         with st.spinner("🤖 Translating..."):
-
-            st.session_state.translation = translate(
-                st.session_state.sentence
+            st.session_state.translation = translate(st.session_state.sentence)
+            
+            # Save history
+            save_history(
+                st.session_state.sentence,
+                st.session_state.translation
             )
 
-        save_history(
-            st.session_state.sentence,
-            st.session_state.translation
-        )
+# if clear_clicked:
+#     st.session_state.sentence = ""
+#     st.session_state.translation = ""
+#     st.rerun()
 
-        st.success("Translation Completed Successfully!")
-
-# ==========================================================
-# Clear
-# ==========================================================
-
-if clear_clicked:
-
-    st.session_state.sentence = ""
-    st.session_state.translation = ""
-
-    st.rerun()
+st.space(1)
 
 # ==========================================================
-# Translation Result
+# Box 2: Second Language (English Output)
 # ==========================================================
+st.markdown(" ### English Language (Output)")
 
 if st.session_state.translation != "":
-
-    st.divider()
-
-    st.subheader("✅ English Translation")
-
-    st.code(
-        st.session_state.translation,
-        language=None
+    st.markdown(
+        f'''
+        <div class="box-card">
+            <div class="output-text">{st.session_state.translation}</div>
+        </div>
+        ''', 
+        unsafe_allow_html=True
     )
-
-    download_placeholder.download_button(
-        label="⬇ Download",
-        data=st.session_state.translation,
-        file_name="translation.txt",
-        mime="text/plain",
-        use_container_width=True
+    
+    st.space(1)
+    
+    col_a, col_download, col_b = st.columns([3, 2, 3])
+    with col_download:
+        st.download_button(
+            label="⬇️ Download Translation",
+            data=st.session_state.translation,
+            file_name="translation.txt",
+            mime="text/plain",
+            use_container_width=True
+        )
+else:
+    st.markdown(
+        '''
+        <div class="box-card">
+            <div class="output-text" style="color: #94a3b8 !important;">
+                Translation output will appear here after clicking the Translate button...
+            </div>
+        </div>
+        ''', 
+        unsafe_allow_html=True
     )
-
-# ==========================================================
-# About Model
-# ==========================================================
-
-st.divider()
-
-st.subheader("🤖 About the Model")
-
-st.info(
-    """
-**Architecture**
-
-- Seq2Seq Encoder–Decoder
-- LSTM Neural Network
-- TensorFlow & Keras
-- Tokenization
-- Greedy Decoding
-- Neural Machine Translation (NMT)
-"""
-)
 
 # ==========================================================
 # Footer
 # ==========================================================
-
 st.divider()
-
-st.caption(
-    "© 2026 | Kharada → English Translator | TensorFlow • Keras • Streamlit"
+st.markdown(
+    """
+    <div style="text-align: center; color: #475569; font-size: 0.9rem; font-weight: 600; padding: 10px 0;">
+        © 2026 | Kharada → English Translator | TensorFlow • Keras • Streamlit
+    </div>
+    """,
+    unsafe_allow_html=True
 )

@@ -1,0 +1,38 @@
+Model: "functional"
+┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃               ┃              ┃  Param ┃              ┃
+┃ Layer (type)  ┃ Output Shape ┃      # ┃ Connected to ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ encoder_inpu… │ (None, None) │      0 │ -            │
+│ (InputLayer)  │              │        │              │
+├───────────────┼──────────────┼────────┼──────────────┤
+│ decoder_inpu… │ (None, None) │      0 │ -            │
+│ (InputLayer)  │              │        │              │
+├───────────────┼──────────────┼────────┼──────────────┤
+│ encoder_embe… │ (None, None, │ 254,9… │ encoder_inp… │
+│ (Embedding)   │ 256)         │        │              │
+├───────────────┼──────────────┼────────┼──────────────┤
+│ not_equal     │ (None, None) │      0 │ encoder_inp… │
+│ (NotEqual)    │              │        │              │
+├───────────────┼──────────────┼────────┼──────────────┤
+│ decoder_embe… │ (None, None, │ 141,5… │ decoder_inp… │
+│ (Embedding)   │ 256)         │        │              │
+├───────────────┼──────────────┼────────┼──────────────┤
+│ encoder_lstm  │ [(None,      │ 1,574… │ encoder_emb… │
+│ (LSTM)        │ 512), (None, │        │ not_equal[0… │
+│               │ 512), (None, │        │              │
+│               │ 512)]        │        │              │
+├───────────────┼──────────────┼────────┼──────────────┤
+│ decoder_lstm  │ [(None,      │ 1,574… │ decoder_emb… │
+│ (LSTM)        │ None, 512),  │        │ encoder_lst… │
+│               │ (None, 512), │        │ encoder_lst… │
+│               │ (None, 512)] │        │              │
+├───────────────┼──────────────┼────────┼──────────────┤
+│ decoder_dense │ (None, None, │ 283,6… │ decoder_lst… │
+│ (Dense)       │ 553)         │        │              │
+└───────────────┴──────────────┴────────┴──────────────┘
+ Total params: 11,490,173 (43.83 MB)
+ Trainable params: 3,830,057 (14.61 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 7,660,116 (29.22 MB)
+

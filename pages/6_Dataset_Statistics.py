@@ -187,7 +187,7 @@ st.divider()
 
 st.subheader("Dataset Split")
 
-fig, ax = plt.subplots(figsize=(6,6))
+fig, ax = plt.subplots(figsize=(2,2))
 
 ax.pie(
 
@@ -199,9 +199,9 @@ ax.pie(
         "Test"
     ],
 
-    autopct="%1.1f%%",
+    autopct="  %1.1f%%",
 
-    startangle=90
+    startangle=45
 
 )
 

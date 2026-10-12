@@ -1,35 +1,30 @@
 import os
 import numpy as np
 
-from tensorflow.keras.callbacks import (
-    EarlyStopping,
-    ModelCheckpoint
-)
+from tensorflow.keras.callbacks import ModelCheckpoint
 
 from utils.dataset import get_data
 from model import build_models
 
-# ================================
-# NEW
-# ================================
-
 from utils.evaluation import (
     save_training_graphs,
-    save_bleu_score,
+    save_model_summary,
     save_evaluation_json,
-    save_model_summary
+    generate_translation_metrics
 )
 
-# ===========================================
+
+# ==========================================================
 # Create Folders
-# ===========================================
+# ==========================================================
 
 os.makedirs("models", exist_ok=True)
 os.makedirs("models/checkpoints", exist_ok=True)
 
-# ===========================================
+
+# ==========================================================
 # Load Dataset
-# ===========================================
+# ==========================================================
 
 (
     X_train,
@@ -52,15 +47,38 @@ os.makedirs("models/checkpoints", exist_ok=True)
 
 ) = get_data()
 
-# ===========================================
+
+# Print dataset shapes
+print("\n===================================")
+print("Dataset Shapes")
+print("===================================")
+
+print("X_train shape:", X_train.shape)
+print("Y_train shape:", Y_train.shape)
+
+print("X_valid shape:", X_valid.shape)
+print("Y_valid shape:", Y_valid.shape)
+
+print("X_test shape :", X_test.shape)
+print("Y_test shape :", Y_test.shape)
+
+
+# ==========================================================
 # Teacher Forcing
-# ===========================================
+# ==========================================================
 
 decoder_input_train = Y_train[:, :-1]
+
 decoder_target_train = Y_train[:, 1:]
 
+
 decoder_input_valid = Y_valid[:, :-1]
+
 decoder_target_valid = Y_valid[:, 1:]
+
+
+# Keras sparse categorical crossentropy
+# expects target shape: (samples, sequence_length, 1)
 
 decoder_target_train = np.expand_dims(
     decoder_target_train,
@@ -72,9 +90,10 @@ decoder_target_valid = np.expand_dims(
     axis=-1
 )
 
-# ===========================================
+
+# ==========================================================
 # Build Models
-# ===========================================
+# ==========================================================
 
 training_model, encoder_model, decoder_model = build_models(
 
@@ -88,11 +107,17 @@ training_model, encoder_model, decoder_model = build_models(
 
 )
 
+
+print("\n===================================")
+print("Model Summary")
+print("===================================")
+
 training_model.summary()
 
-# ===========================================
-# Callbacks
-# ===========================================
+
+# ==========================================================
+# Callback - Model Checkpoint
+# ==========================================================
 
 checkpoint = ModelCheckpoint(
 
@@ -108,72 +133,95 @@ checkpoint = ModelCheckpoint(
 
 )
 
-early_stopping = EarlyStopping(
 
-    monitor="val_loss",
-
-    patience=5,
-
-    restore_best_weights=True,
-
-    verbose=1
-
-)
-
-# ===========================================
+# ==========================================================
 # Train Model
-# ===========================================
+# ==========================================================
+
+print("\n===================================")
+print("Starting Training")
+print("===================================\n")
+
 
 history = training_model.fit(
 
-    x=[X_train, decoder_input_train],
+    x=[
+        X_train,
+        decoder_input_train
+    ],
 
     y=decoder_target_train,
 
     validation_data=(
 
-        [X_valid, decoder_input_valid],
+        [
+            X_valid,
+            decoder_input_valid
+        ],
 
         decoder_target_valid
 
     ),
 
-    epochs=50,
+    epochs=30,
 
     batch_size=32,
 
-    callbacks=[checkpoint, early_stopping]
+    callbacks=[
+        checkpoint
+    ]
 
 )
 
-# ===========================================
+
+# ==========================================================
 # Save Models
-# ===========================================
+# ==========================================================
 
-training_model.save("models/seq2seq.keras")
-encoder_model.save("models/encoder.keras")
-decoder_model.save("models/decoder.keras")
+training_model.save(
+    "models/seq2seq.keras"
+)
 
-print("\n====================================")
-print("Models Saved Successfully!")
-print("====================================")
+encoder_model.save(
+    "models/encoder.keras"
+)
 
-# ===========================================
-# Evaluate
-# ===========================================
+decoder_model.save(
+    "models/decoder.keras"
+)
+
+
+print("\n===================================")
+print("Models Saved Successfully")
+print("===================================")
+
+
+# ==========================================================
+# Evaluate Model on TEST Dataset
+# ==========================================================
+
+print("\n===================================")
+print("Evaluating TEST Dataset")
+print("===================================\n")
+
 
 decoder_input_test = Y_test[:, :-1]
 
 decoder_target_test = Y_test[:, 1:]
+
 
 decoder_target_test = np.expand_dims(
     decoder_target_test,
     axis=-1
 )
 
+
 loss, accuracy = training_model.evaluate(
 
-    [X_test, decoder_input_test],
+    [
+        X_test,
+        decoder_input_test
+    ],
 
     decoder_target_test,
 
@@ -181,69 +229,138 @@ loss, accuracy = training_model.evaluate(
 
 )
 
-print("\n====================================")
+
+print("\n===================================")
 print(f"Test Loss     : {loss:.4f}")
 print(f"Test Accuracy : {accuracy:.4f}")
-print("====================================")
+print("===================================")
 
-# ===========================================
+
+# ==========================================================
 # Save Training Graphs
-# ===========================================
+# ==========================================================
+
+print("\nStep 1: Saving training graphs...")
 
 save_training_graphs(
+
     history,
+
     "models"
+
 )
 
-# ===========================================
+print("Training graphs saved.")
+
+
+# ==========================================================
 # Save Model Summary
-# ===========================================
+# ==========================================================
+
+print("\nStep 2: Saving model summary...")
 
 save_model_summary(
+
     training_model,
+
     "models"
+
 )
 
-# ===========================================
-# Dummy BLEU (Replace Later)
-# ===========================================
+print("Model summary saved.")
 
-references = [
-    [["hello", "friend"]],
-    [["good", "morning"]]
-]
 
-predictions = [
-    ["hello", "friend"],
-    ["good", "morning"]
-]
+# ==========================================================
+# Generate TEST Translation Metrics
+# BLEU + chrF + COMET
+# ==========================================================
 
-bleu = save_bleu_score(
-    references,
-    predictions,
+print("\nStep 3: Generating TEST translations...")
+
+bleu, chrf, comet = generate_translation_metrics(
+
+    X_test,
+
+    Y_test,
+
+    encoder_model,
+
+    decoder_model,
+
+    input_tokenizer,
+
+    target_tokenizer,
+
+    max_encoder_length,
+
+    max_decoder_length,
+
     "models"
+
 )
 
-# ===========================================
-# Save evaluation.json
-# ===========================================
+
+# ==========================================================
+# Print Translation Metrics
+# ==========================================================
+
+print("\n===================================")
+print("TEST Translation Metrics")
+print("===================================")
+
+print(f"BLEU Score  : {bleu:.6f}")
+print(f"chrF Score  : {chrf:.6f}")
+print(f"COMET Score : {comet:.6f}")
+
+print("===================================")
+
+
+# ==========================================================
+# Save Evaluation JSON
+# ==========================================================
+
+print("\nStep 4: Saving evaluation.json...")
+
 
 save_evaluation_json(
+
     bleu,
+
+    chrf,
+
+    comet,
+
+    loss,
+
+    accuracy,
+
     history,
+
     "models"
+
 )
 
-# ===========================================
-# Finished
-# ===========================================
 
-print("\n====================================")
+print("evaluation.json saved.")
+
+
+# ==========================================================
+# Finished
+# ==========================================================
+
+print("\n===================================")
 print("Training Completed Successfully!")
-print("====================================")
-print("Generated Files:")
+print("===================================")
+
+
+print("\nGenerated Files")
+
+print("✔ encoder.keras")
+print("✔ decoder.keras")
+print("✔ seq2seq.keras")
 print("✔ training_loss.png")
 print("✔ training_accuracy.png")
+print("✔ translation_metrics.txt")
 print("✔ bleu_score.txt")
 print("✔ evaluation.json")
 print("✔ model_summary.txt")

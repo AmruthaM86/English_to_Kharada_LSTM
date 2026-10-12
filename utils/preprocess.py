@@ -1,100 +1,242 @@
 import os
-import re
 import random
 from sklearn.model_selection import train_test_split
 
-# -------------------------------
-# File Paths
-# -------------------------------
+
+# ============================================================
+# PATHS
+# ============================================================
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DATASET_PATH = os.path.join(BASE_DIR, "dataset", "english_kharada.txt")
+DATASET_DIR = os.path.join(BASE_DIR, "dataset")
 
-TRAIN_PATH = os.path.join(BASE_DIR, "dataset", "train.txt")
-VALID_PATH = os.path.join(BASE_DIR, "dataset", "validation.txt")
-TEST_PATH = os.path.join(BASE_DIR, "dataset", "test.txt")
+SOURCE_FILE = os.path.join(
+    DATASET_DIR,
+    "english_kharada.txt"
+)
 
+TRAIN_FILE = os.path.join(
+    DATASET_DIR,
+    "train.txt"
+)
 
-# -------------------------------
-# Text Cleaning
-# -------------------------------
+VALIDATION_FILE = os.path.join(
+    DATASET_DIR,
+    "validation.txt"
+)
 
-def clean_english(sentence):
-
-    sentence = sentence.lower().strip()
-    sentence = re.sub(r"\s+", " ", sentence)
-
-    return sentence
-
-
-def clean_kharada(sentence):
-
-    sentence = sentence.strip()
-    sentence = re.sub(r"\s+", " ", sentence)
-
-    return sentence
+TEST_FILE = os.path.join(
+    DATASET_DIR,
+    "test.txt"
+)
 
 
-# -------------------------------
-# Read Dataset
-# -------------------------------
+# ============================================================
+# TEXT CLEANING
+# ============================================================
 
-def load_dataset():
+def clean_english(text):
+    """
+    Clean English sentence.
+    """
 
-    pairs = []
+    text = text.lower()
 
-    with open(DATASET_PATH, "r", encoding="utf-8") as file:
+    # Remove extra spaces
+    text = " ".join(text.split())
 
-        for line in file:
+    return text.strip()
+
+
+def clean_kharada(text):
+    """
+    Clean Kharada/Kannada sentence.
+    """
+
+    # Remove extra spaces
+    text = " ".join(text.split())
+
+    return text.strip()
+
+
+# ============================================================
+# LOAD DATASET
+# ============================================================
+
+def load_dataset(filepath):
+
+    data = []
+
+    print("Reading dataset:")
+    print(filepath)
+
+    with open(
+        filepath,
+        "r",
+        encoding="utf-8"
+    ) as file:
+
+        for line_number, line in enumerate(
+            file,
+            start=1
+        ):
 
             line = line.strip()
 
+            # Skip empty lines
             if not line:
                 continue
 
-            parts = line.split("\t")
+            # ------------------------------------------------
+            # Expected format:
+            #
+            # Kharada sentence <start> English sentence <end>
+            # ------------------------------------------------
 
-            if len(parts) != 2:
+            if "<start>" not in line:
                 continue
 
-            # Dataset format:
-            # Kharada<TAB>English
+            if "<end>" not in line:
+                continue
 
-            kharada = clean_kharada(parts[0])
+            try:
 
-            english = clean_english(parts[1])
+                # Split source and target
+                kharada_text, english_text = line.split(
+                    "<start>",
+                    1
+                )
 
-            # Decoder target (English)
-            english = "<start> " + english + " <end>"
+                # Remove everything after <end>
+                english_text = english_text.split(
+                    "<end>",
+                    1
+                )[0]
 
-            pairs.append((kharada, english))
+                # Clean both sentences
+                kharada_text = clean_kharada(
+                    kharada_text
+                )
 
-    return pairs
+                english_text = clean_english(
+                    english_text
+                )
+
+                # Make sure both sides contain text
+                if kharada_text and english_text:
+
+                    data.append(
+                        (
+                            kharada_text,
+                            english_text
+                        )
+                    )
+
+            except Exception as e:
+
+                print(
+                    f"Skipping invalid line "
+                    f"{line_number}: {e}"
+                )
+
+    print(
+        f"Total valid sentence pairs: {len(data)}"
+    )
+
+    return data
 
 
-# -------------------------------
-# Save Dataset
-# -------------------------------
+# ============================================================
+# SAVE DATASET
+# ============================================================
 
 def save_dataset(data, filepath):
 
-    with open(filepath, "w", encoding="utf-8") as file:
+    with open(
+        filepath,
+        "w",
+        encoding="utf-8"
+    ) as file:
 
-        for kharada, english in data:
+        for source, target in data:
 
-            file.write(kharada + "\t" + english + "\n")
+            # Save as:
+            #
+            # Kharada<TAB>English
+            #
+
+            file.write(
+                source
+                + "\t"
+                + target
+                + "\n"
+            )
 
 
-# -------------------------------
-# Split Dataset
-# -------------------------------
+# ============================================================
+# SPLIT DATASET
+# ============================================================
 
 def split_dataset():
 
-    data = load_dataset()
+    print("=" * 60)
+    print("Kharada → English Dataset Preprocessing")
+    print("=" * 60)
+
+    # Create dataset folder if required
+    os.makedirs(
+        DATASET_DIR,
+        exist_ok=True
+    )
+
+    # --------------------------------------------------------
+    # Load complete dataset
+    # --------------------------------------------------------
+
+    data = load_dataset(
+        SOURCE_FILE
+    )
+
+    total_samples = len(data)
+
+    # --------------------------------------------------------
+    # Check dataset
+    # --------------------------------------------------------
+
+    if total_samples == 0:
+
+        print()
+        print("ERROR: No valid sentence pairs found.")
+        print()
+        print("Expected format:")
+        print(
+            "Kharada sentence "
+            "<start> "
+            "English sentence "
+            "<end>"
+        )
+
+        return
+
+    print()
+    print(
+        f"Total sentences available: "
+        f"{total_samples}"
+    )
+
+    # --------------------------------------------------------
+    # Shuffle dataset
+    # --------------------------------------------------------
+
+    random.seed(42)
 
     random.shuffle(data)
+
+    # ========================================================
+    # 80% TRAIN
+    # 20% TEMPORARY
+    # ========================================================
 
     train_data, temp_data = train_test_split(
         data,
@@ -102,24 +244,125 @@ def split_dataset():
         random_state=42
     )
 
-    valid_data, test_data = train_test_split(
+    # ========================================================
+    # TEMPORARY 20%
+    #
+    # Split it equally:
+    #
+    # 50% of 20% = 10% validation
+    # 50% of 20% = 10% testing
+    # ========================================================
+
+    validation_data, test_data = train_test_split(
         temp_data,
         test_size=0.50,
         random_state=42
     )
 
-    save_dataset(train_data, TRAIN_PATH)
-    save_dataset(valid_data, VALID_PATH)
-    save_dataset(test_data, TEST_PATH)
+    # ========================================================
+    # SAVE DATASETS
+    # ========================================================
 
-    print("=" * 50)
-    print("Dataset Successfully Split")
-    print("=" * 50)
-    print("Total :", len(data))
-    print("Train :", len(train_data))
-    print("Validation :", len(valid_data))
-    print("Test :", len(test_data))
+    save_dataset(
+        train_data,
+        TRAIN_FILE
+    )
 
+    save_dataset(
+        validation_data,
+        VALIDATION_FILE
+    )
+
+    save_dataset(
+        test_data,
+        TEST_FILE
+    )
+
+    # ========================================================
+    # CALCULATE ACTUAL PERCENTAGES
+    # ========================================================
+
+    train_percentage = (
+        len(train_data)
+        / total_samples
+        * 100
+    )
+
+    validation_percentage = (
+        len(validation_data)
+        / total_samples
+        * 100
+    )
+
+    test_percentage = (
+        len(test_data)
+        / total_samples
+        * 100
+    )
+
+    # ========================================================
+    # DISPLAY RESULTS
+    # ========================================================
+
+    print()
+    print("=" * 60)
+    print("DATASET SPLIT COMPLETED")
+    print("=" * 60)
+
+    print(
+        f"Total samples      : "
+        f"{total_samples}"
+    )
+
+    print(
+        f"Training samples   : "
+        f"{len(train_data)} "
+        f"({train_percentage:.2f}%)"
+    )
+
+    print(
+        f"Validation samples : "
+        f"{len(validation_data)} "
+        f"({validation_percentage:.2f}%)"
+    )
+
+    print(
+        f"Testing samples    : "
+        f"{len(test_data)} "
+        f"({test_percentage:.2f}%)"
+    )
+
+    print()
+    print(
+        f"Total after split  : "
+        f"{len(train_data) + len(validation_data) + len(test_data)}"
+    )
+
+    print()
+    print("Files created:")
+
+    print(
+        f"✔ {TRAIN_FILE}"
+    )
+
+    print(
+        f"✔ {VALIDATION_FILE}"
+    )
+
+    print(
+        f"✔ {TEST_FILE}"
+    )
+
+    print()
+    print("=" * 60)
+    print("Preprocessing Completed Successfully")
+    print("=" * 60)
+
+
+# ============================================================
+# MAIN
+# ============================================================
 
 if __name__ == "__main__":
+
     split_dataset()

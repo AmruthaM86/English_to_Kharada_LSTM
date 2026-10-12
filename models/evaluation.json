@@ -1,0 +1,11 @@
+{
+    "BLEU Score": 0.43363486580011945,
+    "chrF Score": 57.597653284379845,
+    "COMET Score": 0.7909579628898251,
+    "Test Loss": 1.3774302005767822,
+    "Test Accuracy": 0.7706879377365112,
+    "Final Training Accuracy": 0.9867682456970215,
+    "Final Training Loss": 0.0413445308804512,
+    "Final Validation Accuracy": 0.7763671278953552,
+    "Final Validation Loss": 1.5324971675872803
+}

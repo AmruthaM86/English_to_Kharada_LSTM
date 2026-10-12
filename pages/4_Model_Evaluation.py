@@ -1,188 +1,435 @@
-import streamlit as st
-import json
 import os
-import pandas as pd
+import json
+import streamlit as st
+
 from utils.helper import load_css
 
-# ==========================================
-# Page Config
-# ==========================================
+
+# ============================================================
+# PAGE CONFIGURATION
+# ============================================================
 
 st.set_page_config(
     page_title="Model Evaluation",
     page_icon="📊",
     layout="wide"
 )
+
+
+# ============================================================
+# LOAD CSS
+# ============================================================
+
 load_css()
-# ==========================================
-# Paths
-# ==========================================
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ICON = os.path.join(
-    BASE_DIR,
-    "assets",
-    "icons",
-    "evaluation.png"
+# ============================================================
+# PATHS
+# ============================================================
+
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.abspath(__file__)
+    )
 )
 
-EVALUATION_FILE = os.path.join(
+MODEL_DIR = os.path.join(
     BASE_DIR,
-    "models",
+    "models"
+)
+
+EVALUATION = os.path.join(
+    MODEL_DIR,
     "evaluation.json"
 )
 
 BLEU_FILE = os.path.join(
-    BASE_DIR,
-    "models",
+    MODEL_DIR,
     "bleu_score.txt"
 )
 
-CONFUSION = os.path.join(
-    BASE_DIR,
-    "models",
-    "confusion_matrix.png"
+TRANSLATION_METRICS = os.path.join(
+    MODEL_DIR,
+    "translation_metrics.txt"
 )
 
-# ==========================================
-# Header
-# ==========================================
+LOSS_GRAPH = os.path.join(
+    MODEL_DIR,
+    "training_loss.png"
+)
 
-col1, col2 = st.columns([1,8])
+ACCURACY_GRAPH = os.path.join(
+    MODEL_DIR,
+    "training_accuracy.png"
+)
+
+MODEL_SUMMARY = os.path.join(
+    MODEL_DIR,
+    "model_summary.txt"
+)
+
+
+# ============================================================
+# PAGE TITLE
+# ============================================================
+
+st.title(
+    "📊 Model Evaluation"
+)
+
+st.write(
+    "Evaluation of the Kharada → English "
+    "Neural Machine Translation model."
+)
+
+
+# ============================================================
+# CHECK EVALUATION FILE
+# ============================================================
+
+if not os.path.exists(EVALUATION):
+
+    st.warning(
+        "Evaluation results are not available yet."
+    )
+
+    st.info(
+        "Run train.py first to generate "
+        "the evaluation results."
+    )
+
+    st.stop()
+
+
+# ============================================================
+# LOAD EVALUATION JSON
+# ============================================================
+
+with open(
+    EVALUATION,
+    "r",
+    encoding="utf-8"
+) as f:
+
+    evaluation = json.load(f)
+
+
+# ============================================================
+# TEST DATASET TRANSLATION METRICS
+# ============================================================
+
+st.header(
+    "🧪 Test Dataset Translation Metrics"
+)
+
+st.write(
+    "BLEU, chrF, and COMET are calculated "
+    "using translations generated from the "
+    "unseen test dataset."
+)
+
+
+col1, col2, col3 = st.columns(3)
+
+
+# ------------------------------------------------------------
+# BLEU
+# ------------------------------------------------------------
 
 with col1:
 
-    if os.path.exists(ICON):
-        st.image(ICON, width=70)
+    bleu = evaluation.get(
+        "BLEU Score",
+        0
+    )
+
+    st.metric(
+        "BLEU Score",
+        f"{bleu:.4f}"
+    )
+
+
+# ------------------------------------------------------------
+# chrF
+# ------------------------------------------------------------
 
 with col2:
 
-    st.title("Model Evaluation")
+    chrf = evaluation.get(
+        "chrF Score",
+        0
+    )
 
-st.write(
-    "Performance of the trained Seq2Seq Encoder-Decoder LSTM model."
+    st.metric(
+        "chrF Score",
+        f"{chrf:.2f}"
+    )
+
+
+# ------------------------------------------------------------
+# COMET
+# ------------------------------------------------------------
+
+with col3:
+
+    comet = evaluation.get(
+        "COMET Score",
+        0
+    )
+
+    st.metric(
+        "COMET Score",
+        f"{comet:.4f}"
+    )
+
+
+# ============================================================
+# TEST SET MODEL METRICS
+# ============================================================
+
+st.header(
+    "📈 Test Dataset Model Metrics"
 )
 
-st.divider()
 
-# ==========================================
-# Read Evaluation File
-# ==========================================
+col1, col2 = st.columns(2)
 
-accuracy = "N/A"
-bleu = "N/A"
 
-if os.path.exists(EVALUATION_FILE):
+with col1:
 
-    with open(EVALUATION_FILE,"r") as f:
+    test_accuracy = evaluation.get(
+        "Test Accuracy",
+        0
+    )
 
-        data = json.load(f)
+    st.metric(
+        "Test Accuracy",
+        f"{test_accuracy:.4f}"
+    )
 
-        accuracy = data.get("accuracy","N/A")
-        bleu = data.get("bleu_score","N/A")
 
-# ==========================================
-# Metrics
-# ==========================================
+with col2:
 
-m1,m2,m3,m4 = st.columns(4)
+    test_loss = evaluation.get(
+        "Test Loss",
+        0
+    )
 
-m1.metric(
-    "Accuracy",
-    accuracy
+    st.metric(
+        "Test Loss",
+        f"{test_loss:.4f}"
+    )
+
+
+# ============================================================
+# TRAINING AND VALIDATION METRICS
+# ============================================================
+
+st.header(
+    "📚 Training and Validation Metrics"
 )
 
-m2.metric(
-    "BLEU Score",
-    bleu
+
+col1, col2 = st.columns(2)
+
+
+with col1:
+
+    training_accuracy = evaluation.get(
+        "Final Training Accuracy",
+        0
+    )
+
+    st.metric(
+        "Training Accuracy",
+        f"{training_accuracy:.4f}"
+    )
+
+
+with col2:
+
+    validation_accuracy = evaluation.get(
+        "Final Validation Accuracy",
+        0
+    )
+
+    st.metric(
+        "Validation Accuracy",
+        f"{validation_accuracy:.4f}"
+    )
+
+
+col1, col2 = st.columns(2)
+
+
+with col1:
+
+    training_loss = evaluation.get(
+        "Final Training Loss",
+        0
+    )
+
+    st.metric(
+        "Training Loss",
+        f"{training_loss:.4f}"
+    )
+
+
+with col2:
+
+    validation_loss = evaluation.get(
+        "Final Validation Loss",
+        0
+    )
+
+    st.metric(
+        "Validation Loss",
+        f"{validation_loss:.4f}"
+    )
+
+
+# ============================================================
+# TRAINING LOSS GRAPH
+# ============================================================
+
+st.header(
+    "📉 Training and Validation Loss"
 )
 
-m3.metric(
-    "Model",
-    "Seq2Seq"
-)
-
-m4.metric(
-    "Architecture",
-    "LSTM"
-)
-
-st.divider()
-
-# ==========================================
-# BLEU Score
-# ==========================================
-
-st.subheader("BLEU Score")
-
-if os.path.exists(BLEU_FILE):
-
-    with open(BLEU_FILE,"r") as file:
-
-        st.code(file.read())
-
-else:
-
-    st.info("BLEU Score file not found.")
-
-st.divider()
-
-# ==========================================
-# Confusion Matrix
-# ==========================================
-
-st.subheader("Confusion Matrix")
-
-if os.path.exists(CONFUSION):
+if os.path.exists(LOSS_GRAPH):
 
     st.image(
-        CONFUSION,
-        use_container_width=True
+        LOSS_GRAPH,
+        caption="Training and Validation Loss"
     )
 
 else:
 
-    st.info("Confusion Matrix not generated.")
+    st.warning(
+        "Training loss graph not found."
+    )
 
-st.divider()
 
-# ==========================================
-# Evaluation JSON
-# ==========================================
+# ============================================================
+# TRAINING ACCURACY GRAPH
+# ============================================================
 
-st.subheader("Evaluation Report")
+st.header(
+    "📊 Training and Validation Accuracy"
+)
 
-if os.path.exists(EVALUATION_FILE):
+if os.path.exists(ACCURACY_GRAPH):
 
-    st.json(data)
+    st.image(
+        ACCURACY_GRAPH,
+        caption="Training and Validation Accuracy"
+    )
 
 else:
 
-    st.warning("evaluation.json not found.")
+    st.warning(
+        "Training accuracy graph not found."
+    )
 
-st.divider()
 
-# ==========================================
-# Download Report
-# ==========================================
+# ============================================================
+# TRANSLATION METRICS FILE
+# ============================================================
 
-if os.path.exists(EVALUATION_FILE):
+st.header(
+    "📄 Translation Metrics"
+)
 
-    with open(EVALUATION_FILE,"rb") as file:
+if os.path.exists(TRANSLATION_METRICS):
+
+    with open(
+        TRANSLATION_METRICS,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        metrics_text = f.read()
+
+    st.code(
+        metrics_text,
+        language="text"
+    )
+
+    with open(
+        TRANSLATION_METRICS,
+        "rb"
+    ) as f:
 
         st.download_button(
-
-            "⬇ Download Evaluation Report",
-
-            data=file,
-
-            file_name="evaluation.json",
-
-            mime="application/json"
-
+            label="⬇️ Download Translation Metrics",
+            data=f,
+            file_name="translation_metrics.txt",
+            mime="text/plain"
         )
 
-st.divider()
+else:
 
-st.success("Model Evaluation Completed Successfully.")
+    st.info(
+        "Translation metrics file has not "
+        "been generated yet."
+    )
+
+
+# ============================================================
+# MODEL SUMMARY
+# ============================================================
+
+st.header(
+    "🧠 Model Architecture"
+)
+
+if os.path.exists(MODEL_SUMMARY):
+
+    with open(
+        MODEL_SUMMARY,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        summary = f.read()
+
+    st.code(
+        summary,
+        language="text"
+    )
+
+else:
+
+    st.warning(
+        "Model summary not found."
+    )
+
+
+# ============================================================
+# COMPLETE EVALUATION JSON
+# ============================================================
+
+st.header(
+    "📋 Complete Evaluation Results"
+)
+
+st.json(
+    evaluation
+)
+
+
+# ============================================================
+# DOWNLOAD EVALUATION JSON
+# ============================================================
+
+with open(
+    EVALUATION,
+    "rb"
+) as f:
+
+    st.download_button(
+        label="⬇️ Download Evaluation JSON",
+        data=f,
+        file_name="evaluation.json",
+        mime="application/json"
+    )

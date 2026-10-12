@@ -7,3 +7,5 @@ streamlit
 joblib
 matplotlib
 tqdm
+sacrebleu
+unbabel-comet

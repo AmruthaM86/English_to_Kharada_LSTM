@@ -1,0 +1,8 @@
+TEST DATASET TRANSLATION METRICS
+=================================
+
+Number of Test Sentences : 155
+
+BLEU Score  : 0.433635
+chrF Score  : 57.597653
+COMET Score : 0.790958

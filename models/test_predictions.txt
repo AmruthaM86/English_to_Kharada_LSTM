@@ -1,0 +1,778 @@
+TEST DATASET TRANSLATION RESULTS
+=================================
+
+Test Sentence 1
+Input     : ಮುಕ್ಕ ನೀದ ಏರ
+Expected  : i feel sleepy
+Predicted : i feel sleepy.
+
+Test Sentence 2
+Input     : ತೀ ಘರಾಣಿ ಅಯ್ಲಿ
+Expected  : she came home.
+Predicted : she went home
+
+Test Sentence 3
+Input     : ಮುಕ್ಕ <unk> ನಾವ <unk>
+Expected  : i know your name
+Predicted : i know your name
+
+Test Sentence 4
+Input     : ತುಮ್ಮಿ ಉತ್ತರ ಬರಾಯ
+Expected  : you write the answer.
+Predicted : you write the answer.
+
+Test Sentence 5
+Input     : ಅಮ್ಮಿ ವೇಳ್ಚಿ ಉಲ್ಲೋವ್ಯ
+Expected  : let us talk in the evening.
+Predicted : let us talk in the evening.
+
+Test Sentence 6
+Input     : ಅಮ್ಮಿ ಪಾಠು ವಾಚ್ಯ
+Expected  : let us read the lesson.
+Predicted : let us study together.
+
+Test Sentence 7
+Input     : ತೋ ಹಂಗ ಒಟ್ಟ
+Expected  : he is <unk>
+Predicted : i brings water.
+
+Test Sentence 8
+Input     : ಹಾವ ಏ ಕೆಲಸ ಕರ್ರ
+Expected  : i will do this work.
+Predicted : i will continue this work.
+
+Test Sentence 9
+Input     : ತೋ ನವೆ <unk> <unk>
+Expected  : he is <unk> a new plant.
+Predicted : he is searching for a job.
+
+Test Sentence 10
+Input     : ತೆಣೆ ಕಿಟಕಿ ಕಾಣ್ಣು ವಾರ ಪಳೆಲ್ಲ
+Expected  : she opened the window and looked at the breeze.
+Predicted : she watered the window and felt the breeze.
+
+Test Sentence 11
+Input     : ವೆಗ್ಗಿ ಘರಾಣಿ <unk>
+Expected  : go home quickly.
+Predicted : we are home now.
+
+Test Sentence 12
+Input     : ಅಮ್ಮಿ <unk> ಖೇಳ್ಯ
+Expected  : let us play in the park.
+Predicted : let us sing together.
+
+Test Sentence 13
+Input     : ತೆಣೆ ಜವಣ <unk> ಕೆಲ್ಲ
+Expected  : she <unk> food.
+Predicted : she called her friend.
+
+Test Sentence 14
+Input     : ತುಮ್ಮಿ ಹಂಗ ರಖ್ಯ
+Expected  : wait here
+Predicted : you wait here.
+
+Test Sentence 15
+Input     : ಅಮ್ಮಿ ಪೈ <unk> <unk>
+Expected  : let us write the exam tomorrow.
+Predicted : let us try together.
+
+Test Sentence 16
+Input     : ತೋ ಶಾಲೆಕ <unk>
+Expected  : he joined school
+Predicted : he went to school.
+
+Test Sentence 17
+Input     : ತುಮ್ಮಿ ಹಂಗ ಭಡ್ಕ್ಯ
+Expected  : you sit here.
+Predicted : you sit here.
+
+Test Sentence 18
+Input     : ಅಮ್ಮಿ ಅತ್ತ ಜಾಂಕ ಒಚ್ಯ
+Expected  : let us go for <unk> now.
+Predicted : let us go home now.
+
+Test Sentence 19
+Input     : ತೆಣೆ ಗಡಿಯಾರ ಪಳೆಲ್ಲ
+Expected  : she looked at the clock.
+Predicted : he cut the window.
+
+Test Sentence 20
+Input     : ತುಮ್ಮಿ <unk> <unk> ಕಾರ್ಗನೂಟ್ಟ
+Expected  : what are you doing?
+Predicted : you listen to me.
+
+Test Sentence 21
+Input     : ಹಾವ ಸತ್ಯ ಸಂಗರ
+Expected  : i tell the truth.
+Predicted : give me the answer.
+
+Test Sentence 22
+Input     : ಮುಕ್ಕ ಏ ಪದ್ಯ ಮನಾಕ <unk> ಅತ್ಸ
+Expected  : this music is close to my heart.
+Predicted : this question is a little difficult for me.
+
+Test Sentence 23
+Input     : ಅಮ್ಮಿ ಸಕ್ಕಳ ಚೌಂಕ್ಯ
+Expected  : let us walk in the morning.
+Predicted : let us walk in the morning.
+
+Test Sentence 24
+Input     : ಮುಕ್ಕ ಪುಸ್ತಕ ದಾಯೆ
+Expected  : i need a book.
+Predicted : i need money.
+
+Test Sentence 25
+Input     : ತೆಣ ಪತ್ರ <unk>
+Expected  : he sent letter
+Predicted : he wrote the letter.
+
+Test Sentence 26
+Input     : ತೂ ಹುಳು ಬಾರಾಯೆ
+Expected  : you write slowly.
+Predicted : you write slowly.
+
+Test Sentence 27
+Input     : ತೆಣೆ ಮಡ್ಡೆ <unk>
+Expected  : she planted a plant.
+Predicted : she sang the lesson.
+
+Test Sentence 28
+Input     : ಅಮ್ಮಿ ಸಾಯಂಕಾಲ ಖೇಳು ಖೇಳ್ಯ್
+Expected  : let us play in the evening.
+Predicted : let us play in the evening.
+
+Test Sentence 29
+Input     : ತೆಣ ಕಾಗದಾನ್ನು ಚಿತ್ರ ಕೆಲ್ಲ
+Expected  : he drew a picture on the paper.
+Predicted : he drew a picture on the paper.
+
+Test Sentence 30
+Input     : ಮುಕ್ಕ ಏ ಕಥೆ <unk> ದಲ್ಲ
+Expected  : i understood this story.
+Predicted : i understood this story.
+
+Test Sentence 31
+Input     : ತೂ ಹವೆ <unk> ಆಯ್ಕ
+Expected  : you listen to my words.
+Predicted : you ask me a question.
+
+Test Sentence 32
+Input     : ಅಮ್ಮಿ ಸಂಗತಾ ಶಿಕ್ಯ
+Expected  : let us learn together.
+Predicted : let us learn together.
+
+Test Sentence 33
+Input     : ಹಾವ ಅತ್ತ ನವೆ ವಿಷಯ ಶಿಕ್ಕುನ್ಗನ್ನೊಟ್ಟ
+Expected  : i am learning a new topic today.
+Predicted : i am learning a new now.
+
+Test Sentence 34
+Input     : ತೋ ವೆಗ್ಗಿ <unk>
+Expected  : he left early
+Predicted : he left early
+
+Test Sentence 35
+Input     : ತೆಣೆ <unk> ಗಮನ <unk> <unk>
+Expected  : she listened <unk> in the class.
+Predicted : she watered the flowers in the garden.
+
+Test Sentence 36
+Input     : ಏ ಅಮ್ತ <unk>
+Expected  : that is our <unk>
+Predicted : this is a big problem.
+
+Test Sentence 37
+Input     : ತುಮ್ಮಿ ಹಂಗ ರಖ್ಯ
+Expected  : you wait here.
+Predicted : you wait here.
+
+Test Sentence 38
+Input     : ತುಮ್ಮಿ <unk> ವಾಚ್ಯ
+Expected  : you read slowly.
+Predicted : you read the answer.
+
+Test Sentence 39
+Input     : ಅಮ್ಮಿ ಸಾಯಂಕಾಲ ಉಲ್ಲೋವ್ಯ
+Expected  : let us talk in the evening.
+Predicted : let us talk in the evening.
+
+Test Sentence 40
+Input     : <unk> ಪೈ <unk> ಬರೇರ
+Expected  : the student will take the <unk> tomorrow.
+Predicted : he woke up
+
+Test Sentence 41
+Input     : ತೆಣೆ <unk> ಸ್ನೇಹಿತಾಕ ಪುಸ್ತಕ ದಿಲ್ಲ
+Expected  : he gave a book to his friend.
+Predicted : she gave a book to her friend.
+
+Test Sentence 42
+Input     : ಅಮ್ಮಿ ಏಕ ಕೆಲಸ ಕರ್ಯ
+Expected  : let us work today
+Predicted : let us work together.
+
+Test Sentence 43
+Input     : ತೂ ಮಜ್ಜ ಸಂಗತಾ ಯೋ
+Expected  : you come with me.
+Predicted : you come with me.
+
+Test Sentence 44
+Input     : ತೋ ಘರಾಣಿ ಗೆಲ್ಲೊ
+Expected  : he went home.
+Predicted : he went home
+
+Test Sentence 45
+Input     : ತೀ ರೋಕ ಕಾರ್ನು ಬರೇರ
+Expected  : she <unk> <unk>
+Predicted : she smiled nicely.
+
+Test Sentence 46
+Input     : ತೊ ಕೆಲಸಾ ಬಗ್ಗೆ ಯೋಚನೆ ಕರ್ರ
+Expected  : he is thinking about the work.
+Predicted : i am very happy today.
+
+Test Sentence 47
+Input     : ತುಮ್ಮಿ ಬಾಗಿಲ ಕಡ್ಯ
+Expected  : open the door
+Predicted : open the door
+
+Test Sentence 48
+Input     : ತೂ ಮಜ್ಜಂಗತ ರಾಭ
+Expected  : you stand with me.
+Predicted : stay with me.
+
+Test Sentence 49
+Input     : ತೀ ಘರಾಣಿ ಪತ್ತಲಿ
+Expected  : she reached home.
+Predicted : she went home
+
+Test Sentence 50
+Input     : ತೂ ವೆಗ್ಗಿ ಉತ್ತರ ಸಾಂಗ
+Expected  : you answer quickly.
+Predicted : you say the answer quickly.
+
+Test Sentence 51
+Input     : ಅಮ್ಮಿ ಸಾಯಂಕಾಲ <unk>
+Expected  : let us meet in the evening.
+Predicted : let us sing in the evening.
+
+Test Sentence 52
+Input     : ಮುಕ್ಕ ಏ ಕೆಲಸ ಸುಲಭ
+Expected  : this work is easy for me.
+Predicted : this work is easy for me.
+
+Test Sentence 53
+Input     : ಮುಕ್ಕ ಏ ಕಥೆ ಇಷ್ಟದಲ್ಲ
+Expected  : i like this story.
+Predicted : i like this story.
+
+Test Sentence 54
+Input     : ತೇ ಕುಚ್ಚಟ ವಿಷಯ
+Expected  : that is bad matter
+Predicted : that is tough news
+
+Test Sentence 55
+Input     : ತೀ <unk> <unk>
+Expected  : she spoke with her friend.
+Predicted : she is at school.
+
+Test Sentence 56
+Input     : ತೆಣ ಸ್ನೇಹಿತಾಕ <unk> ಬಳೇಲ್ಲ
+Expected  : he sent a message to his friend.
+Predicted : he thanked his friend.
+
+Test Sentence 57
+Input     : ತುಮ್ಮಿ ಹಂಗ ಭಡ್ಕ್ಯ
+Expected  : you sit here.
+Predicted : you sit here.
+
+Test Sentence 58
+Input     : ತೂ ಉತ್ತರ ಸಾಂಗ
+Expected  : you say the answer.
+Predicted : you say the answer.
+
+Test Sentence 59
+Input     : ತೋ ಚಾ ಪೀರ
+Expected  : he drinks tea
+Predicted : he drinks tea
+
+Test Sentence 60
+Input     : ತೆಣೆ ಹಣ್ಣು ಕುಟ್ಟಂಕೆಲ್ಲ
+Expected  : she cut the fruit.
+Predicted : she cut the fruit.
+
+Test Sentence 61
+Input     : ತೀ ತರಗತೀನ್ನು ಆಯ್ಕುನ್ಗನ್ನೊಟ್ಟ
+Expected  : she is listening in the class.
+Predicted : she is listening in the class.
+
+Test Sentence 62
+Input     : ಅಮ್ಮಿ ಪದ್ಯ <unk> ಒಟ್ಟಿ
+Expected  : we are listening to a song.
+Predicted : let us go to the park.
+
+Test Sentence 63
+Input     : ಮುಕ್ಕ ಏ ಪ್ರಶ್ನೆ <unk> ದಲ್ಲ
+Expected  : i understood this question.
+Predicted : i understood this lesson.
+
+Test Sentence 64
+Input     : ತುಮ್ಮಿ ಹಂಗ <unk>
+Expected  : you wait here.
+Predicted : you wait here.
+
+Test Sentence 65
+Input     : ತೆಣೆ ಪುಸ್ತಕ <unk>
+Expected  : she closed the book.
+Predicted : she bought a book.
+
+Test Sentence 66
+Input     : ತೀ ಜೇನನ್ನು <unk>
+Expected  : she sat in the garden.
+Predicted : she laughed in the garden.
+
+Test Sentence 67
+Input     : ಅಮ್ಮಿ ಅತ್ತ ಘರಾಣಿ ಒಚ್ಯ
+Expected  : let us go home now.
+Predicted : let us go home now.
+
+Test Sentence 68
+Input     : <unk> <unk>
+Expected  : <unk> friend
+Predicted : check the time.
+
+Test Sentence 69
+Input     : ತುವೆ ಸಮ <unk>
+Expected  : you said right
+Predicted : you said right
+
+Test Sentence 70
+Input     : ತೂ ಮಜ್ಜೆಣಿ ಪ್ರಶ್ನೆ ವಿತಾರಿ
+Expected  : you ask me this question.
+Predicted : you ask me a question.
+
+Test Sentence 71
+Input     : ತೋ ತರಗತೀನ್ನು ಭಡ್ಕಿಲೋ
+Expected  : he sat in the class.
+Predicted : he sat in the classroom.
+
+Test Sentence 72
+Input     : ಮುಕ್ಕ <unk> ಸಹಾವು ಧಾಯೆ
+Expected  : i need your help
+Predicted : i got your help
+
+Test Sentence 73
+Input     : <unk> ಸಂಗಪ ಐಕ
+Expected  : listen to me.
+Predicted : who is there?
+
+Test Sentence 74
+Input     : ಮುಕ್ಕ ಏ ಜಾಗು ಇಷ್ಟ ದಲ್ಲ
+Expected  : i like this place.
+Predicted : i like this work.
+
+Test Sentence 75
+Input     : ಹವೆ ನವೆ ವಿಷಯ ಶಿಕ್ಕಿಲೆ
+Expected  : i learned a new topic.
+Predicted : i learned a new topic.
+
+Test Sentence 76
+Input     : ಮುಕ್ಕ ವಿಶ್ರಾಂತಿ ದಾಯೆ
+Expected  : i need rest
+Predicted : i need water.
+
+Test Sentence 77
+Input     : ತೆಣ ಪತ್ರ ಬರೇಲ್ಲ
+Expected  : he wrote a letter.
+Predicted : he wrote a letter.
+
+Test Sentence 78
+Input     : ಏ ಸಮದಲ್ಲ ಉತ್ತರ
+Expected  : he walks fast
+Predicted : this is the correct answer.
+
+Test Sentence 79
+Input     : ಅಮ್ಮಿ ಹಾಡು <unk>
+Expected  : let us listen to a song.
+Predicted : let us sing song
+
+Test Sentence 80
+Input     : ತೂ ಮಜ್ಜ ಸಂಗತ ರಾಭ
+Expected  : you stay with me.
+Predicted : stay with me
+
+Test Sentence 81
+Input     : ಹವೆ ಕೆಲಸ ಸಾರ್ಲ
+Expected  : i finished the work.
+Predicted : he finished the work.
+
+Test Sentence 82
+Input     : ಆಜಿ ಅಮ್ಮಿ <unk>
+Expected  : we will win today.
+Predicted : let us win today.
+
+Test Sentence 83
+Input     : ತೋ ಚಾ ಕರ್ರ
+Expected  : he makes tea
+Predicted : he makes tea
+
+Test Sentence 84
+Input     : ಮುಕ್ಕ ಏ ಕೆಲಸ ಇಷ್ಟ ದಲ್ಲ
+Expected  : i like this work.
+Predicted : i like this work.
+
+Test Sentence 85
+Input     : ತೆಣೆ ಕೆಲಸ ಸಾರ್ಲ
+Expected  : she finished the work
+Predicted : he finished the work.
+
+Test Sentence 86
+Input     : ತೀ ಖುಷೀನೆ ಉಲ್ಲೇರ
+Expected  : she speaks happily
+Predicted : she speaks happily
+
+Test Sentence 87
+Input     : ತೆಣೆ ಸ್ನೇಹಿತಾಕ <unk>
+Expected  : she gave a flower to her friend.
+Predicted : she saw her friend.
+
+Test Sentence 88
+Input     : ತೆಣೆ ಪುಸ್ತಕ ಧಂಪಿಲ
+Expected  : she closed the book.
+Predicted : she closed the book.
+
+Test Sentence 89
+Input     : ತೂ ಕೆಶ್ಶ ಕರ್ರ
+Expected  : what are you doing?
+Predicted : what are you doing?
+
+Test Sentence 90
+Input     : ತೂ ಹಂಗ ರಾಖ
+Expected  : you wait here.
+Predicted : you wait here.
+
+Test Sentence 91
+Input     : ತೂ ಬಿತರಿ ಯೋ
+Expected  : come inside
+Predicted : come with me.
+
+Test Sentence 92
+Input     : ತೆಣ ಪುಸ್ತಕ <unk> ಳ್ಳ
+Expected  : he opened the book.
+Predicted : he put the book slowly.
+
+Test Sentence 93
+Input     : ತೀ ಹುಳು ಉಲ್ಲೇರ
+Expected  : he spoke slowly.
+Predicted : she poured water
+
+Test Sentence 94
+Input     : ತೋ <unk> <unk> <unk> ಭ <unk>
+Expected  : he sat in the shade of the tree.
+Predicted : he is walking towards the school.
+
+Test Sentence 95
+Input     : ತೂ ಮಜ್ಜ ಸಂಗತ ಯೋ
+Expected  : you come with me.
+Predicted : you come with me.
+
+Test Sentence 96
+Input     : ತೀ <unk> ಒಟ್ಟ
+Expected  : she is smiling now.
+Predicted : she is speaking with her friend.
+
+Test Sentence 97
+Input     : ತೂ ಇದ್ದು ವೇಳು ಭಡ್ಕ
+Expected  : you take some <unk>
+Predicted : you wait here for some time.
+
+Test Sentence 98
+Input     : ತೀ ಕಿಟಕಿಂಟು ಬೈರ <unk>
+Expected  : she is looking outside through the window.
+Predicted : she is standing near the window.
+
+Test Sentence 99
+Input     : ಮುಕ್ಕ ಏ ಚಿತ್ರ ಭರ್ತಿ ಇಷ್ಟ
+Expected  : i like this picture very much.
+Predicted : i like this picture very much.
+
+Test Sentence 100
+Input     : ತೆಣ ಸ್ನೇಹಿತಾಕ ಪತ್ರ ಬರೇಲ್ಲ
+Expected  : he sent a letter to his friend.
+Predicted : he wrote a letter to his friend.
+
+Test Sentence 101
+Input     : ತೀ ಹಣ್ಣು ದೌ ನಿಂಗನೂಟ್ಟ
+Expected  : she is washing the fruits.
+Predicted : she is watering the garden.
+
+Test Sentence 102
+Input     : ಹಾವ ಹಂಗ <unk>
+Expected  : i am waiting here.
+Predicted : i am here
+
+Test Sentence 103
+Input     : ಮುಕ್ಕ ಉತ್ತರ ದಾಯೆ
+Expected  : i need an answer.
+Predicted : i need water.
+
+Test Sentence 104
+Input     : ತೆಣೆ ಪತ್ರ ವಾಚಿಲ
+Expected  : she read the letter.
+Predicted : she read the letter.
+
+Test Sentence 105
+Input     : ತೂ ಗಮನ <unk> <unk>
+Expected  : you listen carefully.
+Predicted : you are you going?
+
+Test Sentence 106
+Input     : ತೀ ಪುಸ್ತಕ ವಾಚುನ್ಗನ್ನೊಟ್ಟ
+Expected  : she is reading a book.
+Predicted : she is reading a book.
+
+Test Sentence 107
+Input     : ತೂ ಮಜ್ಜೆಣಿ ಉತ್ತರ ಸಾಂಗ
+Expected  : you tell me the answer.
+Predicted : you give the answer quickly.
+
+Test Sentence 108
+Input     : ತೀ ಜೇನನ್ನು ಚೌಂಕರ
+Expected  : she walks in the garden.
+Predicted : she walks in the garden.
+
+Test Sentence 109
+Input     : ತೋ ಶಾಲೆಕ <unk> ನ್ಗನ್ನೊಟ್ಟ
+Expected  : he is going to school.
+Predicted : he went to school.
+
+Test Sentence 110
+Input     : ತೆಣೆ ಆಜಿ ಪತ್ರ ಬರೇಲ್ಲ
+Expected  : she wrote letter today
+Predicted : she wrote a letter today
+
+Test Sentence 111
+Input     : ಅಮ್ಮಿ ಅತ್ತ <unk>
+Expected  : let us leave now.
+Predicted : let us eat now.
+
+Test Sentence 112
+Input     : ತೇ <unk> ಪುಸ್ತಕ
+Expected  : that is your book.
+Predicted : that is wrong answer
+
+Test Sentence 113
+Input     : ಹಾವ <unk> <unk> <unk> <unk>
+Expected  : i take <unk> <unk> <unk> <unk>
+Predicted : i am searching for the answer.
+
+Test Sentence 114
+Input     : ತುಮ್ಮಿ ಹಂಗ ಭಡ್ಕ್ಯ
+Expected  : you sit here.
+Predicted : you sit here.
+
+Test Sentence 115
+Input     : ತೀ ಹಾಡು ಅಯ್ಕುನ್ಗನ್ನೊಟ್ಟ
+Expected  : she is listening to a song.
+Predicted : she is listening to a song.
+
+Test Sentence 116
+Input     : ತುಮ್ಮಿ ಹಂಗ ಬರಾಯ
+Expected  : you write here.
+Predicted : you write here.
+
+Test Sentence 117
+Input     : ತೆಣ ಮಡ್ಯಂಕ ಉದೋ ಘಲ್ಲ
+Expected  : he watered the plants.
+Predicted : he watered the plants.
+
+Test Sentence 118
+Input     : ಮುಕ್ಕ <unk>
+Expected  : i feel cold
+Predicted : i feel cold.
+
+Test Sentence 119
+Input     : ತೋ <unk> ಬೈಸರ್ಲೊ
+Expected  : he left school.
+Predicted : he went school
+
+Test Sentence 120
+Input     : ಉತ್ತರ ಸಾಂಗ
+Expected  : tell the answer.
+Predicted : reply quickly
+
+Test Sentence 121
+Input     : ತೆಣೆ <unk> ಫುಲ್ಲ <unk>
+Expected  : she plucked a flower in the garden.
+Predicted : she plucked the name on the paper.
+
+Test Sentence 122
+Input     : ತೆಣೆ ಹಾಡು ಹಾಡುಪಿಲ
+Expected  : she sang a song.
+Predicted : she sang a song.
+
+Test Sentence 123
+Input     : ತೀ ಘಾರ ಸ್ವಚ್ಛ ಕರ್ನ್ಗನ್ನೊಟ್ಟ
+Expected  : she is cleaning house
+Predicted : she is cleaning the house
+
+Test Sentence 124
+Input     : ತುಮ್ಮಿ ಪ್ರಶ್ನೆ ವಿತಾರ
+Expected  : ask a question
+Predicted : ask a question
+
+Test Sentence 125
+Input     : ತೂ ಹುಳು ವಾಚಿರ
+Expected  : you read slowly.
+Predicted : you read slowly.
+
+Test Sentence 126
+Input     : ತೀ ನವೆ ಕಥೆ <unk>
+Expected  : she is reading a new story.
+Predicted : she is writing a new lesson.
+
+Test Sentence 127
+Input     : ತೆಣ ಪುಸ್ತಕ ಬ್ಯಾಗನ್ನು <unk>
+Expected  : he kept the book in the bag.
+Predicted : he put the book in the bag.
+
+Test Sentence 128
+Input     : <unk> ಉತ್ತರ ಗೊಂತುದಲ್ಲ
+Expected  : she <unk> the answer.
+Predicted : he read the work.
+
+Test Sentence 129
+Input     : ಅಮ್ಮಿ ಪೈ <unk>
+Expected  : let us meet tomorrow
+Predicted : let us study tomorrow
+
+Test Sentence 130
+Input     : ತೆಣ ಪೈಶೆ ಹಾಣ್ಣು ದಿಲ್ಲ
+Expected  : he brought money
+Predicted : he brought book
+
+Test Sentence 131
+Input     : ಮುಕ್ಕ ಏ ಉತ್ತರ <unk>
+Expected  : i know this answer.
+Predicted : i understood this music.
+
+Test Sentence 132
+Input     : ವೆಗ್ಗಿ <unk> ಯೋ
+Expected  : run and come quickly.
+Predicted : you get quickly.
+
+Test Sentence 133
+Input     : ಅಮ್ಮಿ ಅತ್ತ ಘಾರ ಸ್ವಚ್ಛ ಕರ್ಯ
+Expected  : let us clean the house now.
+Predicted : let us clean the house now.
+
+Test Sentence 134
+Input     : ತೂ <unk> ಯೋ <unk>
+Expected  : come here quickly.
+Predicted : you come with me.
+
+Test Sentence 135
+Input     : ಮುಕ್ಕ ಏ ಕೆಲಸ ಕಷ್ಟ
+Expected  : this work is difficult for me.
+Predicted : i like this work.
+
+Test Sentence 136
+Input     : ತೋ ಪುಸ್ತಕ ಹಡ್ರ
+Expected  : he brings a book.
+Predicted : he brings money.
+
+Test Sentence 137
+Input     : ತೂ ಮತ್ತ ಸ್ನೇಹಿತ
+Expected  : you are my friend
+Predicted : you are my friend.
+
+Test Sentence 138
+Input     : ತೆಣ ಹಾಡು <unk>
+Expected  : she learned a song.
+Predicted : she saw me
+
+Test Sentence 139
+Input     : ತೋ <unk> ಏರ
+Expected  : he comes to school.
+Predicted : he is washing
+
+Test Sentence 140
+Input     : ತೂ ಸಮ ಅಯ್ಕ
+Expected  : you listen carefully.
+Predicted : you listen properly.
+
+Test Sentence 141
+Input     : ತೇ <unk> ಘಾರ
+Expected  : that is a small house.
+Predicted : that is a wrong decision.
+
+Test Sentence 142
+Input     : ತೆಣೆ ಸ್ನೇಹಿತಾಕ ಪತ್ರ ಬರೇಲ್ಲ
+Expected  : she wrote a letter to her friend.
+Predicted : she wrote a letter to her friend.
+
+Test Sentence 143
+Input     : ಮುಕ್ಕ ಏ ಪ್ರಶ್ನೆ ಅರ್ಥ <unk>
+Expected  : i did not understand this question.
+Predicted : this question is difficult for me.
+
+Test Sentence 144
+Input     : <unk> <unk> <unk> <unk> ಫುಡೆ <unk> ಕಡ್ರ
+Expected  : the teacher had been taking <unk> <unk> before the <unk>
+Predicted : the company will be taking steps to improve quality
+
+Test Sentence 145
+Input     : ಅಮ್ಮಿ ಅತ್ತ ಉಲ್ಲೋ ವ್ಯ
+Expected  : let us talk now.
+Predicted : let us eat now.
+
+Test Sentence 146
+Input     : ತೀ ಆಜಿ ಶಾಲೇಕ ಅಯ್ಲಿ
+Expected  : she came to school today.
+Predicted : she reads the book slowly.
+
+Test Sentence 147
+Input     : ತೆಣೆ <unk> <unk> ಪಳೇಲ
+Expected  : she looked outside through the window.
+Predicted : she spoke with the window.
+
+Test Sentence 148
+Input     : ಮುಕ್ಕ ಏ ಚಿತ್ರ ಭರ್ತಿ ಇಷ್ಟ
+Expected  : i like this picture very much.
+Predicted : i like this picture very much.
+
+Test Sentence 149
+Input     : ಅತ್ತ ವಾಚಕ ಶುರು ಕರ್ಯ
+Expected  : let us start studying now.
+Predicted : let us start studying now.
+
+Test Sentence 150
+Input     : ತೋ ಘರಾಣಿ ಪರ್ತುನು ಗೆಲ್ಲೊ
+Expected  : he returned home
+Predicted : he returned home
+
+Test Sentence 151
+Input     : ಅಮ್ಮಿ ವೇಳ್ಚಿ ಚೌಂಕ್ಯ
+Expected  : let us walk in the evening.
+Predicted : let us walk in the evening.
+
+Test Sentence 152
+Input     : ತೆಣೆ ಉದೊ <unk>
+Expected  : she poured water
+Predicted : she drank water.
+
+Test Sentence 153
+Input     : ಅಮ್ಮಿ ಅತ್ತ ಪಾಠು ವಾಚ್ಯ
+Expected  : let us read the lesson now.
+Predicted : let us go now.
+
+Test Sentence 154
+Input     : ತೂ ಹುಳೂ ಬರಾಯೆ
+Expected  : you write slowly.
+Predicted : you write slowly.
+
+Test Sentence 155
+Input     : ಮುಕ್ಕ ಏ ಜಾಗು ಇಷ್ಟದಲ್ಲ
+Expected  : i like this place.
+Predicted : i like this place.
+
